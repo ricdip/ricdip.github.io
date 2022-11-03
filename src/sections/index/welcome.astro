@@ -1,0 +1,62 @@
+---
+import LinkedInLightIcon from '../../images/svg/contacts/linkedin_light_icon.astro';
+import LinkedInDarkIcon from '../../images/svg/contacts/linkedin_dark_icon.astro';
+import GithubIcon from '../../images/svg/contacts/github_icon.astro';
+import MailIcon from '../../images/svg/contacts/mail_icon.astro';
+import { Links } from '../../Links';
+---
+
+<!-- Welcome -->
+<div id="welcome" class="flex flex-col h-[90vh] justify-center items-center">
+  <!-- Prevent newline in the middle of surname -->
+  <h1 class="text-extrabold text-2xl sm:text-3xl text-center">
+    Riccardo Armando <span class="whitespace-nowrap">Di Prinzio</span>
+  </h1>
+  <h2 class="text-lg sm:text-xl text-center opacity-emphasis-medium font-semibold">Informatico e sviluppatore software</h2>
+  <div class="flex justify-center items-center flex-nowrap pt-2 pb-6">
+    <!-- linkedIn -->
+    <div class="m-2 flex flex-col items-center transition-all">
+      <a aria-label="LinkedIn" href={Links.linkedIn} target="_blank" rel="noopener noreferrer">
+        <!-- light mode -->
+        <div class="dark:hidden w-[25px] h-[25px]">
+          <LinkedInLightIcon />
+        </div>
+
+        <!-- dark mode -->
+        <div class="hidden dark:block w-[25px] h-[25px]">
+          <LinkedInDarkIcon />
+        </div>
+      </a>
+    </div>
+
+    <!-- GitHub -->
+    <div class="m-2 flex flex-col items-center transition-all">
+      <a aria-label="GitHub" href={Links.gitHub} target="_blank" rel="noopener noreferrer">
+        <!-- light mode -->
+        <div class="dark:hidden w-[25px] h-[25px]">
+          <GithubIcon />
+        </div>
+
+        <!-- dark mode -->
+        <div class="hidden dark:block dark:invert w-[25px] h-[25px]">
+          <GithubIcon />
+        </div>
+      </a>
+    </div>
+
+    <!-- Email -->
+    <div class="m-2 flex flex-col items-center transition-all">
+      <a aria-label="Email" class="mail-contact" title="Enable JavaScript to view content" target="_blank" rel="noopener noreferrer">
+        <!-- light mode -->
+        <div class="dark:hidden w-[25px] h-[25px]">
+          <MailIcon />
+        </div>
+        
+        <!-- dark mode -->
+        <div class="hidden dark:block dark:invert w-[25px] h-[25px]">
+          <MailIcon />
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+User-agent: *
+
+Disallow: /*.woff2$
+
+Disallow: /*.pdf$
+
+Disallow: /*.svg$
+
+Disallow: /*.webp$
+
+Disallow: /404.html

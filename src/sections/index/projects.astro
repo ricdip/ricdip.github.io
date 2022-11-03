@@ -1,0 +1,87 @@
+---
+import Badge from "../../components/Badge.astro";
+---
+
+<div class="my-10">
+  <h2 class="text-2xl mb-4 font-semibold flex items-center"><span class="material-symbols-outlined mr-1">code</span>Progetti</h2>
+  <ul class="ml-5 list-disc list-outside">
+    <li id="project-dmon" class="mb-4">
+      <span class="font-semibold text-lg">DMON</span>
+      <p>Architettura per il monitoraggio di applicazioni basate su microservizi. Il progetto ha portato alla creazione di due applicazioni, scritte in Go, in cui una ha il compito di monitorare un qualsiasi sistema a microservizi che utilizza Docker, e l'altra ha il compito di generare workload sul sistema monitorato a partire da un file di descrizione. Il progetto è attualmente coinvolto in una <a href="#publication-dmon" class="font-semibold">pubblicazione</a>.</p>
+      <p>Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
+      <div class="flex flex-row flex-wrap my-1">
+        <Badge text="Go" />
+        <Badge text="Docker" />
+        <Badge text="Microservices" />
+        <Badge text="Software Architectures" />
+      </div>
+      <h4 class="text-sm font-semibold">Autori:</h4>
+      <ul class="list-disc list-inside inner-list">
+        <li class="text-sm mt-1">Supervisore - Prof. Henry Muccini</li>
+        <li class="text-sm mt-1">Supervisore - Prof. Karthik Vaidhyanathan</li>
+        <li class="text-sm mt-1">Sviluppatore - Riccardo Armando Di Prinzio</li>
+        <li class="text-sm mt-1">Sviluppatore - Valentino Di Giosaffatte</li>
+      </ul>
+    </li>
+    
+    <!-- tesi magistrale -->
+    <li class="mb-4">
+      <span class="font-semibold text-lg">Progetto Pedibus</span>
+      <p>Progetto di tesi magistrale che ha portato alla progettazione e sviluppo di un server in Spring Boot e di due applicazioni client Android utilizzate per la gestione di gruppi Pedibus assieme all'utilizzo di dispositivi iBeacon.</p>
+      <p>Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
+      <div class="flex flex-row flex-wrap my-1">
+        <Badge text="Android" />
+        <Badge text="Spring Boot" />
+        <Badge text="iBeacon" />
+        <Badge text="Tesi magistrale" />
+      </div>
+      <h4 class="text-sm font-semibold">Autori:</h4>
+      <ul class="list-disc list-inside inner-list">
+        <li class="text-sm mt-1">Supervisore - Prof. Francesco Tarquini</li>
+        <li class="text-sm mt-1">Supervisore - Prof. Leonardo D'Errico</li>
+        <li class="text-sm mt-1">Sviluppatore - Riccardo Armando Di Prinzio</li>
+      </ul>
+    </li>  
+
+    <li class="mb-4">
+      <span class="font-semibold text-lg">RCP</span>
+      <p>Parser e generatore di codice che lavora con descrizioni astratte di robot scritte in formato YAML. RCP ha lo scopo di controllare robot non ROS2 da un ambiente ROS2.</p>
+      <p>Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
+      <div class="flex flex-row flex-wrap my-1">
+        <Badge text="Python" />
+        <Badge text="ROS 2" />
+        <Badge text="Docker" />
+        <Badge text="Robotica" />
+      </div>
+      <h4 class="text-sm font-semibold">Autori:</h4>
+      <ul class="list-disc list-inside inner-list">
+        <li class="text-sm mt-1">Supervisore - Prof. Giovanni De Gasperis</li>
+        <li class="text-sm mt-1">Sviluppatore - Riccardo Armando Di Prinzio</li>
+        <li class="text-sm mt-1">Sviluppatore - Valentino Di Giosaffatte</li>
+      </ul>
+    </li>               
+    
+    <!-- tesi triennale -->
+    <li class="mb-4">
+      <span class="font-semibold text-lg">Progetto Casa Tracking</span>
+      <p>Progetto di tesi triennale che ha portato alla sviluppo di un'applicazione Android utilizzata per il tracking outdoor di persone con disabilità cognitive.</p>
+      <p>Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
+      <div class="flex flex-row flex-wrap my-1">
+        <Badge text="Android" />
+        <Badge text="Tesi triennale" />
+      </div>
+      <h4 class="text-sm font-semibold">Autori:</h4>
+      <ul class="list-disc list-inside inner-list">
+        <li class="text-sm mt-1">Supervisore - Prof. Francesco Tarquini</li>
+        <li class="text-sm mt-1">Sviluppatore - Riccardo Armando Di Prinzio</li>
+      </ul>
+    </li>  
+
+  </ul>
+</div>
+
+<style>
+  .inner-list {
+      list-style-type: circle;
+  }
+</style>

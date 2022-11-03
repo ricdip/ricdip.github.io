@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404 Not Found" seoMetaTags={false}>
+  <div class="h-[80vh] flex flex-col justify-center items-center px-5 my-8 mx-auto">
+    <h2 class="mb-4 font-extrabold text-9xl">
+      <span class="sr-only">Error</span>404
+    </h2>
+    <p class="text-lg font-semibold mb-8 text-center">Mi dispiace, la pagina richiesta non è stata trovata.</p>
+
+    <a href="/" class="border-gray-800 dark:border-gray-400 border-[1px] hover:bg-gray-200 hover:dark:bg-gray-800 rounded-2xl flex flex-row items-center justify-between px-2 flex-nowrap">
+      <span class="material-symbols-outlined overflow-hidden">arrow_back</span>
+      <div class="flex items-center justify-center p-2 flex-nowrap">
+        <p class="truncate text-semibold">Torna alla Home page</p>
+      </div>
+    </a>
+  </div>
+</Layout>

@@ -1,0 +1,16 @@
+---
+import {Image} from '@astrojs/image/components';
+import profileImage from '../../images/about/profile.jpg';
+---
+
+<div id="about" class="my-10">
+  <h2 class="text-2xl mb-4 font-semibold flex items-center"><span class="material-symbols-outlined mr-1">person</span>About me</h2>
+  <div class="flex flex-col sm:flex-row justify-center items-center">
+    <Image format={"webp"} quality={100} class="rounded-full border-2 border-slate-300 dark:border-slate-600" src={profileImage} width={150} height={150} alt="Riccardo Armando Di Prinzio" />
+    <div class="sm:ml-8 sm:mt-0 mt-4">
+      <p class="text-xl mb-3 font-medium">Ciao, sono Riccardo</p>
+      <p class="text-sm">Fin da quando ero bambino, sono sempre stato attratto dalla tecnologia e soprattutto dai computer. Questo mi ha spinto a studiare e diventare un dottore magistrale in Informatica.</p>
+      <p class="text-sm">Mi piace in particolare sviluppare software ed occuparmi di sistemi informatici.</p>
+    </div>
+  </div>
+</div>

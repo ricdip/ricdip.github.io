@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Welcome from "../sections/index/welcome.astro";
+import About from "../sections/index/about.astro";
+import Education from "../sections/index/education.astro";
+import Works from "../sections/index/works.astro";
+import Publications from "../sections/index/publications.astro";
+import Languages from "../sections/index/languages.astro";
+import Skills from "../sections/index/skills.astro";
+import Projects from "../sections/index/projects.astro";
+import Cv from "../sections/index/cv.astro";
+
+const description = "Sito web personale di Riccardo Armando Di Prinzio, informatico.";
+
+const keywords = "riccardo armando di prinzio, di prinzio, informatica, informatico, software, developer, developing, sviluppatore, java, android, python, mobile, web, javascript, typescript, react native, react, angular, astro";
+---
+
+<Layout title="Home" description={description} keywords={keywords}>
+	<!-- Welcome section -->
+	<Welcome />
+	<!-- About section -->
+	<About />
+	<!-- Education section -->
+	<Education />
+	<!-- Work section -->
+	<Works />
+	<!-- Publications section -->
+	<Publications />
+	<!-- Languages section -->
+	<Languages />
+	<!-- Skills section -->
+	<Skills />
+	<!-- Projects section -->
+	<Projects />
+	<!-- CV section -->
+	<Cv />
+</Layout>
