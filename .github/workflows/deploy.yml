@@ -1,4 +1,4 @@
-name: GitHub Pages Astro
+name: GitHub Pages Astro CI
 
 on:
   # Trigger the workflow every time we push to the `master` branch
