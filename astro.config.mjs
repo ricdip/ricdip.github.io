@@ -11,6 +11,7 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://ricdip.github.io',
   integrations: [tailwind({
     config: {
       applyBaseStyles: false
