@@ -44,7 +44,7 @@ if(title === "") {
     {seoMetaTags && <meta name="og:image" content={`https://ricdip.github.io` + profileImage.src} />}
     {seoMetaTags && <meta name="og:description" content={description} />}
     <!-- Twitter data -->
-    {seoMetaTags && <meta name="twitter:card" content="summary_large_image" />}
+    {seoMetaTags && <meta name="twitter:card" content="summary" />}
     {seoMetaTags && <meta name="twitter:title" content={title} />}
     {seoMetaTags && <meta name="twitter:image" content={`https://ricdip.github.io` + profileImage.src} />}
     {seoMetaTags && <meta name="twitter:description" content={description} />}
@@ -77,6 +77,7 @@ if(title === "") {
 
       window.localStorage.setItem(themeKey, currentTheme);
     </script>
+    <meta name="google-site-verification" content="Rb5lT0iPt1FyFSaMQkdTz-yai-MEK2Vid_wc94wG0AA" />
   </head>
   <body>
     <Header client:load />
