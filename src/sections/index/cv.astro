@@ -1,14 +1,14 @@
 ---
-//import CV from "../../components/CV.astro";
-//import { Links } from "../../Links";
+import CV from "../../components/CV.astro";
+import { Links } from "../../Links";
 ---
 
 <div id="cv" class="my-10">
   <h2 class="text-2xl mb-4 font-semibold flex items-center"><span class="material-symbols-outlined mr-1">description</span>Curriculum Vitae</h2>
 
-  <h3 class="ml-5 flex flex-row items-center"><span class="material-symbols-outlined mr-1">schedule</span>Lavori in corso...</h3>
+  <!--<h3 class="ml-5 flex flex-row items-center"><span class="material-symbols-outlined mr-1">schedule</span>Lavori in corso...</h3>-->
 
-  <!--<CV cvLink={Links.cvIt} anchorText="CV in lingua italiana" cssClasses={"mb-2"} />-->
-  <!--<CV cvLink={Links.cvEn} anchorText="CV in lingua inglese" />-->
+  <CV cvLink={Links.cvIt} anchorText="CV in lingua italiana" cssClasses={"mb-3"} />
+  <CV cvLink={Links.cvEn} anchorText="CV in lingua inglese" />
 
 </div>
