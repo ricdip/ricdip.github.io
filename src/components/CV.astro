@@ -11,7 +11,7 @@ const {cvLink, anchorText, cssClasses = ""} = Astro.props as Props;
 ---
 
 <div class={`w-full flex flex-col justify-center ${cssClasses}`}>
-  <a href={cvLink} target="_blank" type="application/pdf" class="border-gray-800 dark:border-gray-400 border-[1px] hover:bg-gray-200 hover:dark:bg-gray-800 w-full rounded-xl flex flex-row items-center justify-between px-2 flex-nowrap">
+  <a href={cvLink} target="_blank" rel="noopener noreferrer" type="application/pdf" class="border-gray-800 dark:border-gray-400 border-[1px] hover:bg-gray-200 hover:dark:bg-gray-800 w-full rounded-xl flex flex-row items-center justify-between px-2 flex-nowrap">
     <div class="flex items-center justify-center p-2 flex-nowrap">
       <div class="dark:invert w-[26px] h-[26px]">
         <PdfIcon />
