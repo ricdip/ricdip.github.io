@@ -5,7 +5,7 @@ import "flowbite/dist/flowbite.css";
 import Header from "../components/Header.jsx";
 import Footer from '../components/Footer.astro';
 import BackToTopButton from '../components/BackToTopButton.astro';
-import profileImage from '../images/about/profile.jpg';
+import resizedProfileImage from '../images/about/profile_resized.jpg';
 
 export interface Props {
   title?: string,
@@ -41,12 +41,12 @@ if(title === "") {
     {seoMetaTags && <meta name="og:type" content="website" />}
     {seoMetaTags && <meta name="og:url" content="https://ricdip.github.io/" />}
     {seoMetaTags && <meta name="og:title" content={title} />}
-    {seoMetaTags && <meta name="og:image" content={`https://ricdip.github.io` + profileImage.src} />}
+    {seoMetaTags && <meta name="og:image" content={`https://ricdip.github.io` + resizedProfileImage.src} />}
     {seoMetaTags && <meta name="og:description" content={description} />}
     <!-- Twitter data -->
     {seoMetaTags && <meta name="twitter:card" content="summary" />}
     {seoMetaTags && <meta name="twitter:title" content={title} />}
-    {seoMetaTags && <meta name="twitter:image" content={`https://ricdip.github.io` + profileImage.src} />}
+    {seoMetaTags && <meta name="twitter:image" content={`https://ricdip.github.io` + resizedProfileImage.src} />}
     {seoMetaTags && <meta name="twitter:description" content={description} />}
     <!-- End meta tags -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
