@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Post from "../../components/Post.astro";
+
+const description = "Blog personale di Riccardo Armando Di Prinzio, informatico.";
+
+const keywords = "riccardo armando di prinzio, di prinzio, informatica, informatico, software, developer, developing, sviluppatore, blog";
+
+const posts = await Astro.glob("../../posts/*.md");
+
+// sort posts by post.date in descending order (so, from the most recent post to the least recent one)
+posts.sort((o1, o2) => {
+  const date_1 = new Date(o1.frontmatter.date).toISOString();
+  const date_2 = new Date(o2.frontmatter.date).toISOString();
+
+  if(date_1 > date_2) {
+    return -1;
+  } else if(date_1 < date_2) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
+---
+
+<Layout title="Blog" description={description} keywords={keywords}>
+
+  <div class="my-10">
+    <h2 class="text-2xl mb-4 font-semibold flex items-center"><span class="material-symbols-outlined mr-1">rss_feed</span>Blog</h2>
+
+    {posts.map(post => (
+      <Post title={post.frontmatter.title} excerpt={post.frontmatter.excerpt} date={post.frontmatter.date} slug={post.frontmatter.slug} tags={post.frontmatter.tags.split(",")} />
+    ))}
+  
+  </div>
+
+</Layout>

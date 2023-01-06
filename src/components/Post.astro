@@ -1,0 +1,26 @@
+---
+import Badge from './Badge.astro';
+
+export interface Props {
+  title: string,
+  date: string,
+  excerpt: string
+  slug: string,
+  tags: Array<string>
+};
+
+const {title, excerpt, date, slug, tags} = Astro.props as Props;
+---
+
+<a class="hover:bg-gray-200 hover:dark:bg-gray-800 block px-6 py-4 my-10 rounded-xl shadow-md border border-slate-600 dark:border-slate-300" aria-label={title} href={`/blog/${slug}`}>
+  <div>
+    <h1 class="font-bold text-lg">{title}</h1>
+    <h2 class="text-sm mt-2">{date}</h2>
+    <p class="text-sm mb-4 mt-4">{excerpt}</p>
+    <div class="flex flex-row flex-wrap my-1">
+      {tags.map(tag => (
+        <Badge text={tag.trim()} />
+      ))}
+    </div>
+  </div>
+</a>

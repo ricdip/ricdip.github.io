@@ -43,6 +43,7 @@ export default function Header() {
         <a href="/#about" class="py-4 px-6 border-white dark:border-dark border-b-2 transition-[border-color] hover:border-black hover:dark:border-white">About</a>
         <a href="/#skills" class="py-4 px-6 border-white dark:border-dark border-b-2 transition-[border-color] hover:border-black hover:dark:border-white">Skills</a>
         <a href="/#cv" class="py-4 px-6 border-white dark:border-dark border-b-2 transition-[border-color] hover:border-black hover:dark:border-white">CV</a>
+        <a href="/blog" class="py-4 px-6 border-white dark:border-dark border-b-2 transition-[border-color] hover:border-black hover:dark:border-white">Blog</a>
 
         <div class="cursor-pointer py-[20px] px-6 border-white dark:border-dark border-b-2 transition-[border-color] hover:border-black hover:dark:border-white" onClick={toggleTheme}>
           {theme === lightTheme ? <DarkModeIcon /> : <LightModeIcon />}
@@ -67,6 +68,7 @@ export default function Header() {
           <li class="w-auto text-center"><a href="/#about" class="block w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color]">About me</a></li>
           <li class="w-auto text-center"><a href="/#skills" class="block w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color]">Skills</a></li>
           <li class="w-auto text-center"><a href="/#cv" class="block w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color]">CV</a></li>
+          <li class="w-auto text-center"><a href="/blog" class="block w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color]">Blog</a></li>
 
           <li class="w-auto text-center"><div onClick={toggleTheme} class="cursor-pointer flex w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 border-gray-200 border-b-2 transition-[background-color] justify-center items-center">{theme === lightTheme ? <DarkModeIcon /> : <LightModeIcon />}</div></li>
         </ul>

@@ -12,20 +12,24 @@ export interface Props {
   description?: string,
   keywords?: string,
   seoMetaTags?: boolean,
+  seoLang?: string,
+  seoLocale?: string
 };
 
 let {title = ""} = Astro.props as Props;
-const {description = "", keywords = "", seoMetaTags = true} = Astro.props as Props;
+const {description = "", keywords = "", seoMetaTags = true, seoLang = "it", seoLocale = "it_IT"} = Astro.props as Props;
 
 if(title === "") {
   title = "Riccardo Armando Di Prinzio";
 } else {
   title = title + " | Riccardo Armando Di Prinzio";
 }
+
+const seoImageURL = new URL(resizedProfileImage.src, Astro.url.origin);
 ---
 
 <!DOCTYPE html>
-<html class="scroll-smooth scroll-pt-32" lang="it">
+<html class="scroll-smooth scroll-pt-32" lang={seoLang}>
   <head>
     <!-- Primary meta tags -->
     <meta charset="UTF-8" />
@@ -39,14 +43,16 @@ if(title === "") {
     {seoMetaTags && <meta name="robots" content="index,follow" />}
     <!-- OG data -->
     {seoMetaTags && <meta name="og:type" content="website" />}
-    {seoMetaTags && <meta name="og:url" content="https://ricdip.github.io/" />}
+    {seoMetaTags && <meta name="og:url" content={Astro.url} />}
     {seoMetaTags && <meta name="og:title" content={title} />}
-    {seoMetaTags && <meta name="og:image" content={`https://ricdip.github.io` + resizedProfileImage.src} />}
+    {seoMetaTags && <meta name="og:image" content={seoImageURL} />}
     {seoMetaTags && <meta name="og:description" content={description} />}
+    {seoMetaTags && <meta name="og:locale" content={seoLocale} />}
     <!-- Twitter data -->
     {seoMetaTags && <meta name="twitter:card" content="summary" />}
+    {seoMetaTags && <meta name="twitter:url" content={Astro.url} />}
     {seoMetaTags && <meta name="twitter:title" content={title} />}
-    {seoMetaTags && <meta name="twitter:image" content={`https://ricdip.github.io` + resizedProfileImage.src} />}
+    {seoMetaTags && <meta name="twitter:image" content={seoImageURL} />}
     {seoMetaTags && <meta name="twitter:description" content={description} />}
     <!-- End meta tags -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
