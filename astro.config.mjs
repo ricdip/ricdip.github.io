@@ -10,6 +10,9 @@ import preact from "@astrojs/preact";
 import image from "@astrojs/image";
 
 // https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://ricdip.github.io',
   integrations: [tailwind({
@@ -18,5 +21,5 @@ export default defineConfig({
     }
   }), preact(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-  })]
+  }), sitemap()]
 });

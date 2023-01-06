@@ -9,3 +9,5 @@ Disallow: /*.svg$
 Disallow: /*.webp$
 
 Disallow: /404.html
+
+Sitemap: https://ricdip.github.io/sitemap-index.xml
