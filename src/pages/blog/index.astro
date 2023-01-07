@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Post from "../../components/Post.astro";
+import { markdownDateStringToDate } from '../../utils/dateUtils';
 
 const description = "Blog personale di Riccardo Armando Di Prinzio, informatico.";
 
@@ -10,8 +11,8 @@ const posts = await Astro.glob("../../posts/*.md");
 
 // sort posts by post.date in descending order (so, from the most recent post to the least recent one)
 posts.sort((o1, o2) => {
-  const date_1 = new Date(o1.frontmatter.date).toISOString();
-  const date_2 = new Date(o2.frontmatter.date).toISOString();
+  const date_1 = markdownDateStringToDate(o1.frontmatter.date);
+  const date_2 = markdownDateStringToDate(o2.frontmatter.date);
 
   if(date_1 > date_2) {
     return -1;
@@ -29,7 +30,7 @@ posts.sort((o1, o2) => {
     <h2 class="text-2xl mb-4 font-semibold flex items-center"><span class="material-symbols-outlined mr-1">rss_feed</span>Blog</h2>
 
     {posts.map(post => (
-      <Post title={post.frontmatter.title} excerpt={post.frontmatter.excerpt} date={post.frontmatter.date} slug={post.frontmatter.slug} tags={post.frontmatter.tags.split(",")} />
+      <Post title={post.frontmatter.title} excerpt={post.frontmatter.excerpt} date={post.frontmatter.date} slug={post.frontmatter.slug} tags={post.frontmatter.tags.split(",")} locale={post.frontmatter.locale} />
     ))}
   
   </div>
