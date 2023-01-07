@@ -52,7 +52,7 @@ incididunt ut labore et dolore magna aliqua.
 ## Creating the blog page
 
 1. Create the `blog` directory inside `src/pages`
-2. Create `index.astro` file inside `src/pages/blog`:
+2. Create `index.astro` file inside `src/pages/blog`
 3. Within the blog page:
     - We fetch all the posts located within `src/posts` using the `Astro.glob()` function
     - We show the posts to the user
@@ -109,13 +109,13 @@ const { Content, frontmatter } = Astro.props.post;
 
 ## Fixing the styles
 
-1. Install the `typography` plugin by running the following command (I used `npm`):
+1. Install the `typography` plugin by running the following command (I used `npm`)
 
 ```bash
 user@host:~$ npm install @tailwindcss/typography
 ```
 
-2. Add the installed plugin to the `tailwind.config.js` file:
+2. Add the installed plugin to the `tailwind.config.js` file
 
 ```js
 module.exports = {
