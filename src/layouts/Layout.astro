@@ -56,6 +56,8 @@ const seoImageURL = new URL(resizedProfileImage.src, Astro.url.origin);
     {seoMetaTags && <meta name="twitter:description" content={description} />}
     <!-- End meta tags -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
     <title>{title}</title>
     <script defer src="/assets/libs/flowbite.js" is:inline></script>
     <script is:inline>
