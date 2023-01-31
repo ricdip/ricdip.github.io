@@ -1,24 +1,22 @@
 import rss from '@astrojs/rss';
 import { markdownDateStringToDate } from '../utils/dateUtils';
+import Consts from '../consts';
 
 const postImportResult = import.meta.glob('../posts/*.md', { eager: true });
 const posts = Object.values(postImportResult);
 
-const siteBaseUrl = 'https://ricdip.github.io/';
-const siteBlogUrl = siteBaseUrl + 'blog/';
-
 export const get = () => rss({
   // <title> field in output XML
-  title: 'Blog | Riccardo Armando Di Prinzio',
+  title: Consts.rssTitleField,
   // <description> field in output XML
-  description: 'Articles about my work, programming and computer science',
+  description: Consts.rssDescriptionField,
   // base URL for RSS <item> links
-  site: siteBaseUrl,
+  site: Consts.baseUrl + '/',
   // list of <item> in output XML
   items: posts.map((post) => ({
     title: post.frontmatter.title,
     description: post.frontmatter.excerpt,
-    link: siteBlogUrl + post.frontmatter.slug,
+    link: Consts.blogUrl + post.frontmatter.slug,
     pubDate: markdownDateStringToDate(post.frontmatter.date).toISOString()
   }))
 });

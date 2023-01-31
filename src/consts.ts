@@ -1,4 +1,10 @@
 export default class Consts {
+  // site base URL (without final '/')
+  static baseUrl: string = "https://ricdip.github.io";
+  
+  // blog URL
+  static blogUrl: string = this.baseUrl + "/blog/";
+
   // index page
   static indexDescriptionContent: string = "Sito web personale di Riccardo Armando Di Prinzio, informatico.";
   
@@ -14,4 +20,8 @@ export default class Consts {
   static gitHubLink: string = "https://github.com/ricdip";
   static cvItLink: string = "/assets/cv/CV_Riccardo_Armando_Di_Prinzio.pdf";
   static cvEnLink: string = "/assets/cv/CV_Riccardo_Armando_Di_Prinzio_en.pdf";
+
+  // RSS
+  static rssTitleField: string = "Blog | Riccardo Armando Di Prinzio";
+  static rssDescriptionField: string = "Articles about my work, programming and computer science";
 }
