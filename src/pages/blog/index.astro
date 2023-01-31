@@ -2,10 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Post from "../../components/Post.astro";
 import { markdownDateStringToDate } from '../../utils/dateUtils';
-
-const description = "Blog personale di Riccardo Armando Di Prinzio. Articoli sul mio lavoro, sulla programmazione e sull'informatica";
-
-const keywords = "riccardo armando di prinzio, di prinzio, informatica, informatico, software, developer, developing, sviluppatore, blog";
+import Consts from "../../consts";
 
 const posts = await Astro.glob("../../posts/*.md");
 
@@ -24,7 +21,7 @@ posts.sort((o1, o2) => {
 });
 ---
 
-<Layout title="Blog" description={description} keywords={keywords}>
+<Layout title="Blog" description={Consts.blogDescriptionContent} keywords={Consts.blogKeywordsContent}>
 
   <div class="my-10">
     <h2 class="text-2xl mb-4 font-semibold flex items-center"><span class="material-symbols-outlined mr-1">rss_feed</span>Blog</h2>

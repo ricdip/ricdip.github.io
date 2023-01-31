@@ -10,13 +10,10 @@ import Languages from "../sections/index/languages.astro";
 import Skills from "../sections/index/skills.astro";
 import Projects from "../sections/index/projects.astro";
 import Cv from "../sections/index/cv.astro";
-
-const description = "Sito web personale di Riccardo Armando Di Prinzio, informatico.";
-
-const keywords = "riccardo armando di prinzio, di prinzio, informatica, informatico, software, developer, developing, sviluppatore, java, android, python, mobile, web, javascript, typescript, react native, react, angular, astro";
+import Consts from "../consts";
 ---
 
-<Layout title="Home" description={description} keywords={keywords}>
+<Layout title="Home" description={Consts.indexDescriptionContent} keywords={Consts.indexKeywordsContent}>
 	<!-- Welcome section -->
 	<Welcome />
 	<!-- About section -->

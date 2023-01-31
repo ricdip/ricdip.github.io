@@ -3,7 +3,7 @@ import LinkedInLightIcon from '../images/svg/contacts/linkedin_light_icon.astro'
 import LinkedInDarkIcon from '../images/svg/contacts/linkedin_dark_icon.astro';
 import GithubIcon from '../images/svg/contacts/github_icon.astro';
 import MailIcon from '../images/svg/contacts/mail_icon.astro';
-import { Links } from '../Links';
+import Consts from '../consts';
 ---
 
 <footer class="transition-all flex flex-col flex-nowrap items-center justify-center">
@@ -12,7 +12,7 @@ import { Links } from '../Links';
   <div class="pt-1 pb-2 px-2 flex flex-row flex-nowrap items-center justify-center">
     <!-- LinkedIn -->
     <div class="m-2 flex flex-col items-center transition-all">
-      <a aria-label="LinkedIn" href={Links.linkedIn} target="_blank" rel="noopener noreferrer">
+      <a aria-label="LinkedIn" href={Consts.linkedInLink} target="_blank" rel="noopener noreferrer">
         <!-- light mode -->
         <div class="dark:hidden w-[25px] h-[25px]">
           <LinkedInLightIcon />
@@ -27,7 +27,7 @@ import { Links } from '../Links';
 
     <!-- GitHub -->
     <div class="m-2 flex flex-col items-center transition-all">
-      <a aria-label="GitHub" href={Links.gitHub} target="_blank" rel="noopener noreferrer">
+      <a aria-label="GitHub" href={Consts.gitHubLink} target="_blank" rel="noopener noreferrer">
         <!-- light mode -->
         <div class="dark:hidden w-[25px] h-[25px]">
           <GithubIcon />

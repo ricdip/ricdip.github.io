@@ -1,6 +1,6 @@
 ---
 import CV from "../../components/CV.astro";
-import { Links } from "../../Links";
+import Consts from "../../consts";
 ---
 
 <div id="cv" class="my-10">
@@ -8,7 +8,7 @@ import { Links } from "../../Links";
 
   <!--<h3 class="ml-5 flex flex-row items-center"><span class="material-symbols-outlined mr-1">schedule</span>Lavori in corso...</h3>-->
 
-  <CV cvLink={Links.cvIt} anchorText="CV in lingua italiana" cssClasses={"mb-3"} />
-  <CV cvLink={Links.cvEn} anchorText="CV in lingua inglese" />
+  <CV cvLink={Consts.cvItLink} anchorText="CV in lingua italiana" cssClasses={"mb-3"} />
+  <CV cvLink={Consts.cvEnLink} anchorText="CV in lingua inglese" />
 
 </div>
