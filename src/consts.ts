@@ -6,7 +6,7 @@ export default class Consts {
   static blogUrl: string = this.baseUrl + "/blog/";
 
   // index page
-  static indexDescriptionContent: string = "Sito web personale di Riccardo Armando Di Prinzio, informatico.";
+  static indexDescriptionContent: string = "Sito web personale di Riccardo Armando Di Prinzio, informatico. Laureato Magistrale in Informatica presso l'Università degli Studi dell'Aquila con Master in Mobile e Web Technologies.";
   
   static indexKeywordsContent: string = "riccardo armando di prinzio, di prinzio, informatica, informatico, software, developer, developing, sviluppatore, java, android, python, mobile, web, javascript, typescript, react native, react, angular, astro";
 
