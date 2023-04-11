@@ -1,5 +1,6 @@
 ---
 import Badge from "../../components/Badge.astro";
+import ProjectDescription from "../../components/ProjectDescription.astro";
 ---
 
 <div class="my-10">
@@ -9,22 +10,9 @@ import Badge from "../../components/Badge.astro";
     <!-- software architectures -->
     <li id="project-msa-mon" class="mb-4">
       <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">Architecture for Monitoring of Microservice-based Systems</span></h2>
-      <p>Progetto di <span class="italic">Software Architectures</span> che ha portato alla realizzazione di un'architettura per il monitoraggio di applicazioni basate su microservizi.</p>
-      <!-- TODO: accordion with info
-      <p>Il progetto ha portato alla creazione di due applicazioni scritte in Go:</p>
-      <ul class="list-disc list-inside inner-list">
-        <li><code>DMON</code>: applicazione che ha il compito di monitorare un qualsiasi sistema a microservizi che utilizza Docker.</li>
-        <li><code>WGEN</code>: applicazione che ha il compito di generare workload sul sistema monitorato utilizzando due file in formato YAML contenenti uno la descrizione del workload da generare, e l'altro la descrizione dell'API esposta dal sistema target.</li>
-      </ul>
-      <p>Il progetto ha portato alla creazione di due applicazioni scritte in Rust utilizzate per testare le applicazioni Go:</p>
-      <ul class="list-disc list-inside inner-list">
-        <li><code>XDRIVER</code>: applicazione che effettua un singolo test eseguendo l'applicazione <code>WGEN</code> e raccogliendo le informazioni catturate da <code>DMON</code> durante il monitoraggio del sistema a microservizi in esecuzione. I dati raccolti vengono salvati su filesystem creando un dataset per ciascun test eseguito.</li>
-        <li><code>XFLOW</code>: applicazione che effettua diversi test in sequenza eseguendo l'applicazione <code>XDRIVER</code> utilizzando i parametri contenuti in un file YAML che contiene la descrizione del workflow da effettuare.</li>
-      </ul>
-      <p>Il progetto ha portato alla creazione di diversi Jupyter Notebook in cui vengono effettuate analisi statistiche dei dati contenuti nei dataset generati durante i test.</p>
-      -->
-      <p>Il progetto è attualmente coinvolto in una <a href="#publication-msa-mon" class="font-semibold">pubblicazione</a>.</p>
-      <p>Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
+      <p class="mt-1">Progetto di <span class="italic">Software Architectures</span> che ha portato alla realizzazione di un'architettura per il monitoraggio di applicazioni basate su microservizi.</p>
+      <p class="mt-1">Il progetto è attualmente coinvolto in una <a href="#publication-msa-mon" class="font-semibold">pubblicazione</a>.</p>
+      <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Software Architectures" />
         <Badge text="Microservices" />
@@ -33,6 +21,19 @@ import Badge from "../../components/Badge.astro";
         <Badge text="Rust" />
         <Badge text="Python" />
       </div>
+      <ProjectDescription id="msa-mon" cssClasses="mt-2 mb-2">
+        <p class="mt-1">Il progetto ha portato alla creazione di due applicazioni principali scritte in Go:</p>
+        <ul class="list-disc list-inside inner-list">
+          <li class="mt-1"><code>DMON</code>: applicazione che ha il compito di monitorare un qualsiasi sistema a microservizi che utilizza Docker.</li>
+          <li class="mt-1"><code>WGEN</code>: applicazione che ha il compito di generare workload sul sistema monitorato utilizzando due file in formato YAML contenenti uno la descrizione del workload da generare, e l'altro la descrizione dell'API esposta dal sistema target.</li>
+        </ul>
+        <p class="mt-1">Il progetto ha portato alla creazione di due applicazioni scritte in Rust utilizzate per testare le applicazioni principali:</p>
+        <ul class="list-disc list-inside inner-list">
+          <li class="mt-1"><code>XDRIVER</code>: applicazione che effettua un singolo test eseguendo l'applicazione <code>WGEN</code> e raccogliendo le informazioni catturate da <code>DMON</code> durante il monitoraggio del sistema a microservizi in esecuzione. I dati raccolti vengono salvati su filesystem creando un dataset per ciascun test eseguito.</li>
+          <li class="mt-1"><code>XFLOW</code>: applicazione che effettua diversi test in sequenza eseguendo l'applicazione <code>XDRIVER</code> utilizzando i parametri contenuti in un file YAML che contiene la descrizione del workflow da effettuare.</li>
+        </ul>
+        <p class="mt-1">Il progetto ha portato alla creazione di diversi Jupyter Notebook in cui vengono effettuate analisi statistiche dei dati contenuti nei dataset generati durante i test.</p>
+      </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
         <li class="text-sm mt-1">Supervisore - Prof. Henry Muccini</li>
@@ -45,8 +46,8 @@ import Badge from "../../components/Badge.astro";
     <!-- tesi magistrale -->
     <li class="mb-4">
       <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">Pedibus</span></h2>
-      <p>Progetto di tesi magistrale che ha portato alla progettazione e sviluppo di un server Spring Boot e di due applicazioni client Android utilizzati per la gestione di gruppi Pedibus assieme all'utilizzo di dispositivi iBeacon.</p>
-      <p>Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
+      <p class="mt-1">Progetto di tesi magistrale che ha portato alla progettazione e sviluppo di un server Spring Boot e di due applicazioni client Android utilizzati per la gestione di gruppi Pedibus assieme all'utilizzo di dispositivi iBeacon.</p>
+      <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Tesi magistrale" />
         <Badge text="Android" />
@@ -65,9 +66,9 @@ import Badge from "../../components/Badge.astro";
 
     <li class="mb-4">
       <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">RCP</span></h2>
-      <p>Progetto di <span class="italic">Robotica</span> che ha portato alla realizzazione dell'applicazione <code>RCP</code> (Robot Configuration Parser): un parser e generatore di codice che lavora con descrizioni astratte di robot scritte in formato YAML.</p>
-      <p><code>RCP</code> ha lo scopo di controllare robot non ROS 2 da un ambiente ROS 2.</p>
-      <p>Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
+      <p class="mt-1">Progetto di <span class="italic">Robotica</span> che ha portato alla realizzazione dell'applicazione <code>RCP</code> (Robot Configuration Parser): un parser e generatore di codice che lavora con descrizioni astratte di robot scritte in formato YAML.</p>
+      <p class="mt-1"><code>RCP</code> ha lo scopo di controllare robot non ROS 2 da un ambiente ROS 2.</p>
+      <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Robotica" />
         <Badge text="ROS 2" />
@@ -85,8 +86,8 @@ import Badge from "../../components/Badge.astro";
     <!-- tesi triennale -->
     <li class="mb-4">
       <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">Casa Tracking</span></h2>
-      <p>Progetto di tesi triennale che ha portato allo sviluppo di un'applicazione Android utilizzata per il tracking outdoor di persone con disabilità cognitive.</p>
-      <p>Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
+      <p class="mt-1">Progetto di tesi triennale che ha portato allo sviluppo di un'applicazione Android utilizzata per il tracking outdoor di persone con disabilità cognitive.</p>
+      <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Tesi triennale" />
         <Badge text="Android" />

@@ -1,0 +1,25 @@
+---
+export interface Props {
+  id: string,
+  cssClasses?: string,
+};
+
+const {id, cssClasses = ""} = Astro.props as Props;
+---
+
+<!-- accordion -->
+<div class={cssClasses} id={`accordion-collapse-${id}`} data-accordion="collapse" data-active-classes="underline" data-inactive-classes="no-underline">
+  <h2 id={`accordion-collapse-${id}-heading`}>
+    <button type="button" class="flex flex-row justify-start items-center" data-accordion-target={`#accordion-collapse-${id}-body`} aria-expanded="false" aria-controls={`accordion-collapse-${id}-body`}>
+      <span class="text-sm font-semibold">Descrizione del progetto</span>
+      <svg data-accordion-icon class="w-4 h-4 shrink-0 duration-150" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </button>
+  </h2>
+
+  <div id={`accordion-collapse-${id}-body`} class="hidden mt-2 mb-2" aria-labelledby={`accordion-collapse-${id}-heading`}>
+    <!-- content -->
+    <slot />
+    <!-- end content -->
+  </div>
+</div>
+<!-- end accordion -->
