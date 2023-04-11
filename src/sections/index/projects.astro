@@ -21,16 +21,16 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
         <Badge text="Rust" />
         <Badge text="Python" />
       </div>
-      <ProjectDescription id="msa-mon" cssClasses="mt-2 mb-2">
+      <ProjectDescription id="project-msa-mon-descr" cssClasses="mt-2 mb-2">
         <p class="mt-1">Il progetto ha portato alla creazione di due applicazioni principali scritte in Go:</p>
         <ul class="list-disc list-inside inner-list">
-          <li class="mt-1"><code>DMON</code>: applicazione che ha il compito di monitorare un qualsiasi sistema a microservizi che utilizza Docker.</li>
-          <li class="mt-1"><code>WGEN</code>: applicazione che ha il compito di generare workload sul sistema monitorato utilizzando due file in formato YAML contenenti uno la descrizione del workload da generare, e l'altro la descrizione dell'API esposta dal sistema target.</li>
+          <li class="mt-1"><span class="text-sm font-semibold">DMON</span>: applicazione che ha il compito di monitorare un qualsiasi sistema a microservizi che utilizza Docker.</li>
+          <li class="mt-1"><span class="text-sm font-semibold">WGEN</span>: applicazione che ha il compito di generare workload sul sistema monitorato utilizzando due file in formato <code>YAML</code> contenenti uno la descrizione del workload da generare, e l'altro la descrizione dell'<code>API</code> esposta dal sistema target.</li>
         </ul>
         <p class="mt-1">Il progetto ha portato alla creazione di due applicazioni scritte in Rust utilizzate per testare le applicazioni principali:</p>
         <ul class="list-disc list-inside inner-list">
-          <li class="mt-1"><code>XDRIVER</code>: applicazione che effettua un singolo test eseguendo l'applicazione <code>WGEN</code> e raccogliendo le informazioni catturate da <code>DMON</code> durante il monitoraggio del sistema a microservizi in esecuzione. I dati raccolti vengono salvati su filesystem creando un dataset per ciascun test eseguito.</li>
-          <li class="mt-1"><code>XFLOW</code>: applicazione che effettua diversi test in sequenza eseguendo l'applicazione <code>XDRIVER</code> utilizzando i parametri contenuti in un file YAML che contiene la descrizione del workflow da effettuare.</li>
+          <li class="mt-1"><span class="text-sm font-semibold">XDRIVER</span>: applicazione che effettua un singolo test eseguendo l'applicazione <code class="text-sm">WGEN</code> e raccogliendo le informazioni catturate da <code class="text-sm">DMON</code> durante il monitoraggio del sistema a microservizi in esecuzione. I dati raccolti vengono salvati su filesystem creando un dataset per ciascun test eseguito.</li>
+          <li class="mt-1"><span class="text-sm font-semibold">XFLOW</span>: applicazione che effettua diversi test in sequenza eseguendo l'applicazione <code class="text-sm">XDRIVER</code> utilizzando i parametri contenuti in un file <code>YAML</code> che contiene la descrizione del workflow da effettuare.</li>
         </ul>
         <p class="mt-1">Il progetto ha portato alla creazione di diversi Jupyter Notebook in cui vengono effettuate analisi statistiche dei dati contenuti nei dataset generati durante i test.</p>
       </ProjectDescription>
@@ -56,6 +56,14 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
         <Badge text="Kotlin" />
         <Badge text="Java" />
       </div>
+      <ProjectDescription id="project-pedibus-descr" cssClasses="mt-2 mb-2">
+        <p class="mt-1">Di seguito verranno descritte le tre applicazioni create nel progetto:</p>
+        <ul class="list-disc list-inside inner-list">
+          <li class="mt-1"><span class="text-base font-semibold">ServerApp</span>: applicazione server che espone un'interfaccia web utilizzabile da utenti Amministratori, Tutor e Genitori per la gestione delle informazioni presenti nel sistema. L'applicazione espone inoltre un'<code>API</code> <code>REST</code> che permette alle applicazioni client di interagire con il server.</li>
+          <li class="mt-1"><span class="text-base font-semibold">TutorApp</span>: applicazione client che supporta l'utente Tutor avvisandolo in caso di allontanamento di uno dei bambini monitorati nel percorso Pedibus. Durante il monitoraggio vengono utilizzati i dispositivi iBeacon indossati dai bambini.</li>
+          <li class="mt-1"><span class="text-base font-semibold">ParentApp</span>: applicazione client che supporta l'utente Genitore avvisandolo nel caso in cui un bambino, associato all'utente, si allontani dal Tutor durante il percorso Pedibus. L'applicazione mostra inoltre la posizione <code>GPS</code> del Tutor in tempo reale durante il percorso.</li>
+        </ul>
+      </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
         <li class="text-sm mt-1">Supervisore - Prof. Francesco Tarquini</li>
@@ -66,8 +74,8 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
 
     <li class="mb-4">
       <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">RCP</span></h2>
-      <p class="mt-1">Progetto di <span class="italic">Robotica</span> che ha portato alla realizzazione dell'applicazione <code>RCP</code> (Robot Configuration Parser): un parser e generatore di codice che lavora con descrizioni astratte di robot scritte in formato YAML.</p>
-      <p class="mt-1"><code>RCP</code> ha lo scopo di controllare robot non ROS 2 da un ambiente ROS 2.</p>
+      <p class="mt-1">Progetto di <span class="italic">Robotica</span> che ha portato alla realizzazione dell'applicazione <code>RCP</code> (Robot Configuration Parser): un parser e generatore di codice che lavora con descrizioni astratte di robot scritte in formato <code>YAML</code>.</p>
+      <p class="mt-1"><code>RCP</code> ha lo scopo di controllare robot non <code>ROS</code> <code>2</code> da un ambiente <code>ROS</code> <code>2</code>.</p>
       <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Robotica" />
