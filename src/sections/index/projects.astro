@@ -75,14 +75,19 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
     <li class="mb-4">
       <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">RCP</span></h2>
       <p class="mt-1">Progetto di <span class="italic">Robotica</span> che ha portato alla realizzazione dell'applicazione <code>RCP</code> (Robot Configuration Parser): un parser e generatore di codice che lavora con descrizioni astratte di robot scritte in formato <code>YAML</code>.</p>
-      <p class="mt-1"><code>RCP</code> ha lo scopo di controllare robot non <code>ROS</code> <code>2</code> da un ambiente <code>ROS</code> <code>2</code>.</p>
+      <p class="mt-1"><code>RCP</code> ha lo scopo di controllare robot non <code>ROS</code> da un ambiente <code>ROS2</code>.</p>
       <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Robotica" />
-        <Badge text="ROS 2" />
+        <Badge text="ROS2" />
         <Badge text="Docker" />
         <Badge text="Python" />
       </div>
+      <ProjectDescription id="project-rcp-descr" cssClasses="mt-2 mb-2">
+        <p class="mt-1"><code>RCP</code> è in grado di generare due librerie separate che forniscono un layer di astrazione tra un ambiente <code>ROS2</code> e un ambiente non <code>ROS</code>.</p>
+        <p class="mt-1">Questo layer garantisce a due programmi separati (uno sul lato non <code>ROS</code> e l'altro sul lato <code>ROS2</code>) una comunicazione bidirezionale in un ambiente distribuito.</p>
+        <p class="mt-1">Il layer fornisce un'astrazione per i payload (conversione automatica dei messaggi <code>ROS2</code> con interfaccia custom in formato <code>JSON</code>). Questo ci permette di controllare gli attuatori e i sensori di un robot che non ha un'implementazione <code>ROS2</code> attraverso l'uso di un programma <code>ROS2</code>.</p>
+      </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
         <li class="text-sm mt-1">Supervisore - Prof. Giovanni De Gasperis</li>
