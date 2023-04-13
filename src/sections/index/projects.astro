@@ -104,8 +104,21 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Tesi triennale" />
         <Badge text="Android" />
+        <Badge text="Firebase" />
         <Badge text="Java" />
       </div>
+      <ProjectDescription id="project-casa-tracking-descr" cssClasses="mt-2 mb-2">
+        <p class="mt-1">Di seguito verranno descritte le funzionalità dell'applicazione creata nel progetto:</p>
+        <ul class="list-disc list-inside inner-list">
+          <li class="mt-1">Geolocalizzazione dell'utente su una mappa Google Maps con percorsi e aree sicure.</li>
+          <li class="mt-1">Alert all'utente con segnale sonoro e vibrazione in caso di allontanamento dall'area sicura e popup con possibilità di chiamata all'educatore.</li>
+          <li class="mt-1">Invio di <code>SMS</code> all'educatore contenente un link Google Maps con la posizione attuale dell'utente in caso di allontanamento dall'area sicura.</li>
+          <li class="mt-1">Chiamata e <code>SMS</code> (con link Google Maps) all'educatore disponibili in qualsiasi momento con la pressione del bottone <code>SOS</code>.</li>
+          <li class="mt-1">Possibilità dell'utente di consultare una mappa Google Maps con un segnalatore che corrisponde alla sua posizione in tempo reale.</li>
+          <li class="mt-1">Possibilità dell'utente di scegliere un percorso. In esso, l'utente viene guidato passo passo verso i diversi punti di interesse che lo compongono.</li>
+          <li class="mt-1">Possibilità dell'educatore di conoscere la posizione dell'utente e controllare in qualsiasi momento se esso si trova nell'area sicura. L'implementazione di questa funzionalità ha richiesto l'utilizzo delle notifiche Firebase e di un server <code>PHP</code> che espone un'interfaccia web utilizzabile dall'educatore.</li>
+        </ul>
+      </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
         <li class="text-sm mt-1">Supervisore - Prof. Francesco Tarquini</li>
