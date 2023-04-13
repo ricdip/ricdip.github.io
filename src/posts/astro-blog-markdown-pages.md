@@ -150,7 +150,7 @@ module.exports = {
 
 Access the post pages from the blog page and check if the pages load correctly and if the styles are applied to them. If so, the integration was successful.
 
-# References
+## References
 
 1. Astro Docs. [Markdown & MDX](https://docs.astro.build/en/guides/markdown-content/) (Accessed: 05-01-2023)
 2. Tailwind CSS. [Typography Plugin](https://tailwindcss.com/docs/typography-plugin/) (Accessed: 05-01-2023)
