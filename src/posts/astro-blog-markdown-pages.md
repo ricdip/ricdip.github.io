@@ -8,8 +8,6 @@ lang: en
 locale: en_US
 ---
 
-# Astro blog with Markdown pages
-
 The following sequence of steps enabled Markdown pages on my Astro blog with Tailwind CSS.
 
 ## Creating the post example files
