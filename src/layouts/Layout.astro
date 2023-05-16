@@ -14,10 +14,11 @@ export interface Props {
   seoMetaTags?: boolean,
   seoLang?: string,
   seoLocale?: string
+  seoRemoveMetaImage?: boolean
 };
 
 let {title = ""} = Astro.props as Props;
-const {description = "", keywords = "", seoMetaTags = true, seoLang = "it", seoLocale = "it_IT"} = Astro.props as Props;
+const {description = "", keywords = "", seoMetaTags = true, seoLang = "it", seoLocale = "it_IT", seoRemoveMetaImage = false} = Astro.props as Props;
 
 if(title === "") {
   title = "Riccardo Armando Di Prinzio";
@@ -45,14 +46,14 @@ const seoImageURL = new URL(resizedProfileImage.src, Astro.url.origin);
     {seoMetaTags && <meta name="og:type" content="website" />}
     {seoMetaTags && <meta name="og:url" content={Astro.url} />}
     {seoMetaTags && <meta name="og:title" content={title} />}
-    {seoMetaTags && <meta name="og:image" content={seoImageURL} />}
+    {(seoMetaTags && !seoRemoveMetaImage) && <meta name="og:image" content={seoImageURL} />}
     {seoMetaTags && <meta name="og:description" content={description} />}
     {seoMetaTags && <meta name="og:locale" content={seoLocale} />}
     <!-- Twitter data -->
     {seoMetaTags && <meta name="twitter:card" content="summary" />}
     {seoMetaTags && <meta name="twitter:url" content={Astro.url} />}
     {seoMetaTags && <meta name="twitter:title" content={title} />}
-    {seoMetaTags && <meta name="twitter:image" content={seoImageURL} />}
+    {(seoMetaTags && !seoRemoveMetaImage) && <meta name="twitter:image" content={seoImageURL} />}
     {seoMetaTags && <meta name="twitter:description" content={description} />}
     <!-- End meta tags -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />

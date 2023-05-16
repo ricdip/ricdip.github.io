@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post;
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.excerpt} keywords={frontmatter.tags} seoLang={frontmatter.lang} seoLocale={frontmatter.locale}>
+<Layout title={frontmatter.title} description={frontmatter.excerpt} keywords={frontmatter.tags} seoLang={frontmatter.lang} seoLocale={frontmatter.locale} seoRemoveMetaImage={true}>
   <div class="my-10 prose dark:prose-invert max-w-none prose-img:rounded-md">
     <Content />
   </div>
