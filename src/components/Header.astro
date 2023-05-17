@@ -1,0 +1,100 @@
+<header class="sticky top-0 z-50 select-none shadow dark:shadow-gray-600 bg-gray-50 dark:bg-dark text-xl transition-all tracking-wide">
+
+  <!-- Standard navbar -->
+  <div class="hidden sm:flex flex-wrap justify-center items-center">
+    <a href="/#welcome" class="py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">
+      <span class="font-bold text-xl">Ricdip</span>
+    </a>
+    <a href="/#about" class="py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">About</a>
+    <a href="/#skills" class="py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">Skills</a>
+    <a href="/#cv" class="py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">CV</a>
+    <a href="/blog" class="py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">Blog</a>
+
+    <button type="button" class="theme-toggle hidden py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">
+      <svg class="theme-toggle-dark-icon hidden mx-1 my-1 w-5 h-5" fill="#000000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+      <svg class="theme-toggle-light-icon hidden mx-1 my-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
+  </div>
+
+  <!-- Mobile navbar -->
+  <div class="sm:hidden flex flex-wrap justify-between items-center">
+    <a href="/#welcome" class="py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">
+      <span class="font-bold text-xl">Ricdip</span>
+    </a>
+    <div class="flex justify-center items-center">
+      <button type="button" class="theme-toggle hidden py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">
+        <svg class="theme-toggle-dark-icon hidden mx-1 my-1 w-5 h-5" fill="#000000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        <svg class="theme-toggle-light-icon hidden mx-1 my-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+      </button>
+      <button id="dropdown-toggle" type="button" class="py-4 px-6 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md">
+        <svg id="menu-hamburger" class="w-5 h-5 mx-1 my-1 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        <svg id="menu-close" class="w-5 h-5 mx-1 my-1 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>       
+      </button>
+    </div>
+  </div>
+
+  <ul id="dropdown-header" class="hidden sm:hidden">
+    <li class="w-auto text-center"><a href="/#about" class="block w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md border-t-2 border-solid dark:border-gray-600">About me</a></li>
+    <li class="w-auto text-center"><a href="/#skills" class="block w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md border-t-2 border-solid dark:border-gray-600">Skills</a></li>
+    <li class="w-auto text-center"><a href="/#cv" class="block w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md border-t-2 border-solid dark:border-gray-600">CV</a></li>
+    <li class="w-auto text-center"><a href="/blog" class="block w-auto py-4 hover:bg-gray-200 hover:dark:bg-gray-700 transition-[background-color] rounded-md border-t-2 border-solid dark:border-gray-600">Blog</a></li>
+  </ul>
+</header>
+
+<script is:inline>
+  //<![CDATA[
+  // dark mode toggle
+  const themeToggleDarkIcons = document.getElementsByClassName('theme-toggle-dark-icon');
+  const themeToggleLightIcons = document.getElementsByClassName('theme-toggle-light-icon');
+  const themeToggleBtns = document.getElementsByClassName("theme-toggle");
+
+  themeToggleBtns[0].classList.remove('hidden');
+  themeToggleBtns[1].classList.remove('hidden');
+
+  if(currentTheme === lightTheme) {
+    themeToggleDarkIcons[0].classList.remove('hidden');
+    themeToggleDarkIcons[1].classList.remove('hidden');
+  } else {
+    themeToggleLightIcons[0].classList.remove('hidden');
+    themeToggleLightIcons[1].classList.remove('hidden');
+  }
+
+  const toggle_func = function() {
+    // toggle icons inside button
+    themeToggleDarkIcons[0].classList.toggle('hidden');
+    themeToggleDarkIcons[1].classList.toggle('hidden');
+    
+    themeToggleLightIcons[0].classList.toggle('hidden');
+    themeToggleLightIcons[1].classList.toggle('hidden');
+
+    const currentTheme = (typeof localStorage !== "undefined" && localStorage.getItem(themeKey)) ? localStorage.getItem(themeKey) : lightTheme;
+
+    const newTheme = currentTheme === lightTheme ? darkTheme : lightTheme
+
+    if(newTheme === lightTheme) {
+      document.documentElement.classList.remove(darkTheme);
+    } else {
+      document.documentElement.classList.add(darkTheme);
+    }
+    localStorage.setItem(themeKey, newTheme);
+  };
+
+  themeToggleBtns[0].addEventListener('click', toggle_func);
+  themeToggleBtns[1].addEventListener('click', toggle_func);
+
+  // responsive header
+  const dropdownToggleBtn = document.getElementById("dropdown-toggle");
+  const dropdownHeader = document.getElementById('dropdown-header');
+  const menuHamburger = document.getElementById('menu-hamburger');
+  const menuClose = document.getElementById('menu-close');
+
+  menuHamburger.classList.toggle('hidden');
+
+  dropdownToggleBtn.addEventListener('click', function() {
+    dropdownHeader.classList.toggle('hidden');
+
+    menuHamburger.classList.toggle('hidden');
+    menuClose.classList.toggle('hidden');
+  });
+  //]]>
+</script>

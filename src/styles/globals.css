@@ -43,24 +43,3 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-
-/* Header */
-.navbar-menu {
-  @apply hidden;
-}
-
-.menu-close {
-  @apply hidden;
-}
-
-#navbar-menu-button:checked ~ .navbar-menu {
-  @apply block;
-}
-
-#navbar-menu-button:checked ~ #navbar-menu-label .menu-hamburger {
-  @apply hidden;
-}
-
-#navbar-menu-button:checked ~ #navbar-menu-label .menu-close {
-  @apply block;
-}

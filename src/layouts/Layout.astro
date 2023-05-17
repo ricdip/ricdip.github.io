@@ -2,7 +2,7 @@
 import '../styles/globals.css';
 import "flowbite/dist/flowbite.css";
 
-import Header from "../components/Header.jsx";
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BackToTopButton from '../components/BackToTopButton.astro';
 import resizedProfileImage from '../images/about/profile_resized.jpg';
@@ -62,6 +62,7 @@ const seoImageURL = new URL(resizedProfileImage.src, Astro.url.origin);
     <title>{title}</title>
     <script defer src="/assets/libs/flowbite.js" is:inline></script>
     <script is:inline>
+      //<![CDATA[
       const themeKey = "theme";
       const lightTheme = "light";
       const darkTheme = "dark";
@@ -85,11 +86,12 @@ const seoImageURL = new URL(resizedProfileImage.src, Astro.url.origin);
       }
 
       window.localStorage.setItem(themeKey, currentTheme);
+      //]]>
     </script>
     <meta name="google-site-verification" content="Rb5lT0iPt1FyFSaMQkdTz-yai-MEK2Vid_wc94wG0AA" />
   </head>
-  <body>
-    <Header client:load />
+  <body>    
+    <Header />
     <main class="max-w-screen-md mx-auto px-8">
       <BackToTopButton />
       <slot />
