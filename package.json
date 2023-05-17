@@ -12,14 +12,12 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.10.0",
-    "@astrojs/preact": "^1.2.0",
     "@astrojs/rss": "^1.0.3",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^2.1.0",
     "@tailwindcss/typography": "^0.5.8",
     "astro": "^1.5.0",
     "flowbite": "^1.5.3",
-    "preact": "^10.11.2",
     "sharp": "^0.31.1",
     "tailwindcss": "^3.1.8"
   }
