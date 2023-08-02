@@ -4,50 +4,44 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
 ---
 
 <div class="my-10">
-  <h2 class="text-2xl mb-4 font-semibold flex items-center"><span class="material-symbols-outlined mr-1">code</span>Progetti e applicazioni</h2>
+  <h2 class="text-2xl mb-4 font-semibold flex items-center"><span class="material-symbols-outlined mr-1">code</span>Progetti</h2>
 
   <ul class="ml-5 list-disc list-outside">
     <!-- software architectures -->
     <li id="project-msa-mon" class="mb-4">
       <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">Architecture for Monitoring of Microservice-based Systems</span></h2>
-      <p class="mt-1">Progetto di <span class="italic">Software Architectures</span> che ha portato alla realizzazione di un'architettura per il monitoraggio di applicazioni basate su microservizi.</p>
+      <p class="mt-1">Progetto per l'esame di <span class="italic">Software Architectures</span> che ha portato alla realizzazione di un'architettura per il monitoraggio di applicazioni basate su microservizi attraverso l'esecuzione di benchmark.</p>
       <p class="mt-1">Il progetto è attualmente coinvolto in una <a href="#publication-msa-mon" class="font-semibold">pubblicazione</a>.</p>
       <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Microservices" />
         <Badge text="Docker" />
-        <Badge text="Kubernetes" />
         <Badge text="Go" />
-        <Badge text="Rust" />
         <Badge text="Python" />
         <Badge text="Redis" />
       </div>
       <ProjectDescription id="project-msa-mon-descr" cssClasses="mt-2 mb-2">
-        <p class="mt-1">Il progetto ha portato alla creazione di due applicazioni principali scritte in Go:</p>
+        <p class="mt-1">Il progetto ha portato alla creazione di diverse applicazioni scritte in Go:</p>
         <ul class="list-disc list-inside inner-list">
           <li class="mt-1"><span class="text-sm font-semibold">DMON</span>: applicazione che ha il compito di monitorare un qualsiasi sistema a microservizi che utilizza Docker.</li>
           <li class="mt-1"><span class="text-sm font-semibold">WGEN</span>: applicazione che ha il compito di generare workload sul sistema monitorato utilizzando due file in formato <code>YAML</code> contenenti uno la descrizione del workload da generare, e l'altro la descrizione dell'<code>API</code> esposta dal sistema target.</li>
+          <li class="mt-1"><span class="text-sm font-semibold">FLOW</span>: applicazione che ha il compito di eseguire una sequenza di benchmark sul sistema monitorato utilizzando un file in formato <code>YAML</code> contenente la descrizione dei benchmark. L'applicazione, per ogni benchmark eseguito, effettua la generazione del workload eseguendo l'applicazione <code class="text-sm">WGEN</code> e raccoglie le informazioni catturate da <code class="text-sm">DMON</code> durante il monitoraggio del sistema a microservizi in esecuzione. I dati raccolti vengono salvati su filesystem creando un dataset per ciascun benchmark.</li>
         </ul>
-        <p class="mt-1">Il progetto ha portato alla creazione di due applicazioni scritte in Rust utilizzate per testare le applicazioni principali:</p>
-        <ul class="list-disc list-inside inner-list">
-          <li class="mt-1"><span class="text-sm font-semibold">XDRIVER</span>: applicazione che effettua un singolo test eseguendo l'applicazione <code class="text-sm">WGEN</code> e raccogliendo le informazioni catturate da <code class="text-sm">DMON</code> durante il monitoraggio del sistema a microservizi in esecuzione. I dati raccolti vengono salvati su filesystem creando un dataset per ciascun test eseguito.</li>
-          <li class="mt-1"><span class="text-sm font-semibold">XFLOW</span>: applicazione che effettua diversi test in sequenza eseguendo l'applicazione <code class="text-sm">XDRIVER</code> utilizzando i parametri contenuti in un file <code>YAML</code> che contiene la descrizione del workflow da effettuare.</li>
-        </ul>
-        <p class="mt-1">Il progetto ha portato alla creazione di diversi Jupyter Notebook in cui vengono effettuate analisi statistiche dei dati contenuti nei dataset generati durante i test.</p>
+        <p class="mt-1">Il progetto ha portato alla creazione di diversi Jupyter Notebook in cui vengono effettuate analisi statistiche dei dati contenuti nei dataset generati durante i benchmark.</p>
       </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
         <li class="text-sm mt-1">Supervisore - Prof. Henry Muccini</li>
         <li class="text-sm mt-1">Supervisore - Prof. Karthik Vaidhyanathan</li>
-        <li class="text-sm mt-1">Sviluppatore - Riccardo Armando Di Prinzio</li>
-        <li class="text-sm mt-1">Sviluppatore - Valentino Di Giosaffatte</li>
+        <li class="text-sm mt-1">Sviluppatore - Dott. Riccardo Armando Di Prinzio</li>
+        <li class="text-sm mt-1">Sviluppatore - Dott. Valentino Di Giosaffatte</li>
       </ul>
     </li>
     
     <!-- tesi magistrale -->
     <li class="mb-4">
-      <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">Pedibus</span></h2>
-      <p class="mt-1">Progetto di tesi magistrale che ha portato alla progettazione e sviluppo di un server Spring Boot e di due applicazioni client Android utilizzati per la gestione di gruppi Pedibus assieme all'utilizzo di dispositivi iBeacon.</p>
+      <h2 class="font-semibold text-lg mb-1">Sviluppo sistema per gestione di gruppi <span class="italic">Piedibus</span></h2>
+      <p class="mt-1">Progetto di tesi di laurea magistrale che ha portato alla progettazione e sviluppo di un'applicazione web Spring Boot e di due applicazioni mobili Android utilizzate per la gestione di gruppi Piedibus attraverso l'utilizzo di dispositivi iBeacon.</p>
       <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Android" />
@@ -56,20 +50,21 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
         <Badge text="iBeacon" />
         <Badge text="Kotlin" />
         <Badge text="Java" />
+        <Badge text="RESTful APIs" />
       </div>
       <ProjectDescription id="project-pedibus-descr" cssClasses="mt-2 mb-2">
         <p class="mt-1">Di seguito verranno descritte le tre applicazioni create nel progetto:</p>
         <ul class="list-disc list-inside inner-list">
-          <li class="mt-1"><span class="text-base font-semibold">ServerApp</span>: applicazione server che espone un'interfaccia web utilizzabile da utenti Amministratori, Tutor e Genitori per la gestione delle informazioni presenti nel sistema. L'applicazione espone inoltre un'<code>API</code> <code>REST</code> che permette alle applicazioni client di interagire con il server.</li>
-          <li class="mt-1"><span class="text-base font-semibold">TutorApp</span>: applicazione client che supporta l'utente Tutor avvisandolo in caso di allontanamento di uno dei bambini monitorati nel percorso Pedibus. Durante il monitoraggio vengono utilizzati i dispositivi iBeacon indossati dai bambini.</li>
-          <li class="mt-1"><span class="text-base font-semibold">ParentApp</span>: applicazione client che supporta l'utente Genitore avvisandolo nel caso in cui un bambino, associato all'utente, si allontani dal Tutor durante il percorso Pedibus. L'applicazione mostra inoltre la posizione <code>GPS</code> del Tutor in tempo reale durante il percorso.</li>
+          <li class="mt-1"><span class="text-base font-semibold">ServerApp</span>: applicazione web utilizzabile da utenti Amministratori, Tutor e Genitori per la gestione delle informazioni presenti nel sistema. L'applicazione espone inoltre l'<code>API</code> <code>REST</code> che viene utilizzata dalle applicazioni Android.</li>
+          <li class="mt-1"><span class="text-base font-semibold">TutorApp</span>: applicazione mobile che supporta l'utente Tutor avvisandolo in caso di allontanamento di uno dei bambini monitorati nel percorso Piedibus. Durante il monitoraggio vengono utilizzati i dispositivi iBeacon indossati dai bambini.</li>
+          <li class="mt-1"><span class="text-base font-semibold">ParentApp</span>: applicazione mobile che supporta l'utente Genitore avvisandolo nel caso in cui un bambino, associato all'utente, si allontani dal Tutor durante il percorso Piedibus. L'applicazione mostra inoltre la posizione <code>GPS</code> del Tutor in tempo reale durante il percorso.</li>
         </ul>
       </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
         <li class="text-sm mt-1">Supervisore - Prof. Francesco Tarquini</li>
         <li class="text-sm mt-1">Supervisore - Prof. Leonardo D'Errico</li>
-        <li class="text-sm mt-1">Sviluppatore - Riccardo Armando Di Prinzio</li>
+        <li class="text-sm mt-1">Sviluppatore - Dott. Riccardo Armando Di Prinzio</li>
       </ul>
     </li>  
 
@@ -92,15 +87,15 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
         <li class="text-sm mt-1">Supervisore - Prof. Giovanni De Gasperis</li>
-        <li class="text-sm mt-1">Sviluppatore - Riccardo Armando Di Prinzio</li>
-        <li class="text-sm mt-1">Sviluppatore - Valentino Di Giosaffatte</li>
+        <li class="text-sm mt-1">Sviluppatore - Dott. Riccardo Armando Di Prinzio</li>
+        <li class="text-sm mt-1">Sviluppatore - Dott. Valentino Di Giosaffatte</li>
       </ul>
     </li>               
     
     <!-- tesi triennale -->
     <li class="mb-4">
-      <h2 class="font-semibold text-lg mb-1">Progetto <span class="italic">Casa Tracking</span></h2>
-      <p class="mt-1">Progetto di tesi triennale che ha portato allo sviluppo di un'applicazione Android utilizzata per il tracking outdoor di persone con disabilità cognitive.</p>
+      <h2 class="font-semibold text-lg mb-1">Sviluppo applicazione Android <span class="italic">Casa Tracking</span></h2>
+      <p class="mt-1">Progetto di tesi di laurea triennale che ha portato allo sviluppo di un'applicazione Android utilizzata per il tracking outdoor di persone con disabilità cognitive.</p>
       <p class="mt-1">Il codice sorgente del progetto non è attualmente visibile (<span class="underline">closed source</span>).</p>
       <div class="flex flex-row flex-wrap my-1">
         <Badge text="Android" />
@@ -117,13 +112,13 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
           <li class="mt-1">Chiamata e <code>SMS</code> (con link Google Maps) all'educatore disponibili in qualsiasi momento con la pressione del bottone <code>SOS</code>.</li>
           <li class="mt-1">Possibilità dell'utente di consultare una mappa Google Maps con un segnalatore che corrisponde alla sua posizione in tempo reale.</li>
           <li class="mt-1">Possibilità dell'utente di scegliere un percorso. In esso, l'utente viene guidato passo passo verso i diversi punti di interesse che lo compongono.</li>
-          <li class="mt-1">Possibilità dell'educatore di conoscere la posizione dell'utente e controllare in qualsiasi momento se esso si trova nell'area sicura. L'implementazione di questa funzionalità ha richiesto l'utilizzo delle notifiche Firebase e di un server <code>PHP</code> che espone un'interfaccia web utilizzabile dall'educatore.</li>
+          <li class="mt-1">Possibilità dell'educatore di conoscere la posizione dell'utente e controllare in qualsiasi momento se esso si trova nell'area sicura. L'implementazione di questa funzionalità ha richiesto l'utilizzo delle notifiche Firebase e lo sviluppo di un'applicazione web <code>PHP</code> utilizzabile dall'educatore.</li>
         </ul>
       </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
         <li class="text-sm mt-1">Supervisore - Prof. Francesco Tarquini</li>
-        <li class="text-sm mt-1">Sviluppatore - Riccardo Armando Di Prinzio</li>
+        <li class="text-sm mt-1">Sviluppatore - Dott. Riccardo Armando Di Prinzio</li>
       </ul>
     </li>  
 
