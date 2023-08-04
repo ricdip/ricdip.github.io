@@ -21,13 +21,13 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
         <Badge text="Redis" />
       </div>
       <ProjectDescription id="project-msa-mon-descr" cssClasses="mt-2 mb-2">
-        <p class="mt-1">Il progetto ha portato alla creazione di diverse applicazioni scritte in Go:</p>
+        <p class="mt-2">Il progetto ha portato alla creazione di diverse applicazioni scritte in Go:</p>
         <ul class="list-disc list-inside inner-list">
-          <li class="mt-1"><span class="text-sm font-semibold">DMON</span>: applicazione che ha il compito di monitorare un qualsiasi sistema a microservizi che utilizza Docker.</li>
-          <li class="mt-1"><span class="text-sm font-semibold">WGEN</span>: applicazione che ha il compito di generare workload sul sistema monitorato utilizzando due file in formato <code>YAML</code> contenenti uno la descrizione del workload da generare, e l'altro la descrizione dell'<code>API</code> esposta dal sistema target.</li>
-          <li class="mt-1"><span class="text-sm font-semibold">FLOW</span>: applicazione che ha il compito di eseguire una sequenza di benchmark sul sistema monitorato utilizzando un file in formato <code>YAML</code> contenente la descrizione dei benchmark. L'applicazione, per ogni benchmark eseguito, effettua la generazione del workload eseguendo l'applicazione <code class="text-sm">WGEN</code> e raccoglie le informazioni catturate da <code class="text-sm">DMON</code> durante il monitoraggio del sistema a microservizi in esecuzione. I dati raccolti vengono salvati su filesystem creando un dataset per ciascun benchmark.</li>
+          <li class="mt-2"><span class="text-sm font-semibold">DMON</span>: applicazione che ha il compito di monitorare un qualsiasi sistema a microservizi che utilizza Docker.</li>
+          <li class="mt-2"><span class="text-sm font-semibold">WGEN</span>: applicazione che ha il compito di generare workload sul sistema monitorato utilizzando due file in formato <code>YAML</code> contenenti uno la descrizione del workload da generare, e l'altro la descrizione dell'<code>API</code> esposta dal sistema target.</li>
+          <li class="mt-2"><span class="text-sm font-semibold">FLOW</span>: applicazione che ha il compito di eseguire una sequenza di benchmark sul sistema monitorato utilizzando un file in formato <code>YAML</code> contenente la descrizione dei benchmark. L'applicazione, per ogni benchmark eseguito, effettua la generazione del workload eseguendo l'applicazione <code class="text-sm">WGEN</code> e raccoglie le informazioni catturate da <code class="text-sm">DMON</code> durante il monitoraggio del sistema a microservizi in esecuzione. I dati raccolti vengono salvati su filesystem creando un dataset per ciascun benchmark.</li>
         </ul>
-        <p class="mt-1">Il progetto ha portato alla creazione di diversi Jupyter Notebook in cui vengono effettuate analisi statistiche dei dati contenuti nei dataset generati durante i benchmark.</p>
+        <p class="mt-2">Il progetto ha portato alla creazione di diversi Jupyter Notebook in cui vengono effettuate analisi statistiche dei dati contenuti nei dataset generati durante i benchmark.</p>
       </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
@@ -53,11 +53,11 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
         <Badge text="RESTful APIs" />
       </div>
       <ProjectDescription id="project-pedibus-descr" cssClasses="mt-2 mb-2">
-        <p class="mt-1">Di seguito verranno descritte le tre applicazioni create nel progetto:</p>
+        <p class="mt-2">Di seguito verranno descritte le tre applicazioni create nel progetto:</p>
         <ul class="list-disc list-inside inner-list">
-          <li class="mt-1"><span class="text-base font-semibold">ServerApp</span>: applicazione web utilizzabile da utenti Amministratori, Tutor e Genitori per la gestione delle informazioni presenti nel sistema. L'applicazione espone inoltre l'<code>API</code> <code>REST</code> che viene utilizzata dalle applicazioni Android.</li>
-          <li class="mt-1"><span class="text-base font-semibold">TutorApp</span>: applicazione mobile che supporta l'utente Tutor avvisandolo in caso di allontanamento di uno dei bambini monitorati nel percorso Piedibus. Durante il monitoraggio vengono utilizzati i dispositivi iBeacon indossati dai bambini.</li>
-          <li class="mt-1"><span class="text-base font-semibold">ParentApp</span>: applicazione mobile che supporta l'utente Genitore avvisandolo nel caso in cui un bambino, associato all'utente, si allontani dal Tutor durante il percorso Piedibus. L'applicazione mostra inoltre la posizione <code>GPS</code> del Tutor in tempo reale durante il percorso.</li>
+          <li class="mt-2"><span class="text-base font-semibold">ServerApp</span>: applicazione web utilizzabile da utenti Amministratori, Tutor e Genitori per la gestione delle informazioni presenti nel sistema. L'applicazione espone inoltre l'<code>API</code> <code>REST</code> che viene utilizzata dalle applicazioni Android.</li>
+          <li class="mt-2"><span class="text-base font-semibold">TutorApp</span>: applicazione mobile che supporta l'utente Tutor avvisandolo in caso di allontanamento di uno dei bambini monitorati nel percorso Piedibus. Durante il monitoraggio vengono utilizzati i dispositivi iBeacon indossati dai bambini.</li>
+          <li class="mt-2"><span class="text-base font-semibold">ParentApp</span>: applicazione mobile che supporta l'utente Genitore avvisandolo nel caso in cui un bambino, associato all'utente, si allontani dal Tutor durante il percorso Piedibus. L'applicazione mostra inoltre la posizione <code>GPS</code> del Tutor in tempo reale durante il percorso.</li>
         </ul>
       </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
@@ -80,9 +80,9 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
         <Badge text="Redis" />
       </div>
       <ProjectDescription id="project-rcp-descr" cssClasses="mt-2 mb-2">
-        <p class="mt-1"><code>RCP</code> è in grado di generare due librerie separate che forniscono un layer di astrazione tra un ambiente <code>ROS2</code> e un ambiente non <code>ROS</code>.</p>
-        <p class="mt-1">Questo layer garantisce a due programmi separati (uno sul lato non <code>ROS</code> e l'altro sul lato <code>ROS2</code>) una comunicazione bidirezionale in un ambiente distribuito.</p>
-        <p class="mt-1">Il layer fornisce un'astrazione per i payload (conversione automatica dei messaggi <code>ROS2</code> con interfaccia custom in formato <code>JSON</code>). Questo ci permette di controllare gli attuatori e i sensori di un robot che non ha un'implementazione <code>ROS2</code> attraverso l'uso di un programma <code>ROS2</code>.</p>
+        <p class="mt-2"><code>RCP</code> è in grado di generare due librerie separate che forniscono un layer di astrazione tra un ambiente <code>ROS2</code> e un ambiente non <code>ROS</code>.</p>
+        <p class="mt-2">Questo layer garantisce a due programmi separati (uno sul lato non <code>ROS</code> e l'altro sul lato <code>ROS2</code>) una comunicazione bidirezionale in un ambiente distribuito.</p>
+        <p class="mt-2">Il layer fornisce un'astrazione per i payload (conversione automatica dei messaggi <code>ROS2</code> con interfaccia custom in formato <code>JSON</code>). Questo ci permette di controllare gli attuatori e i sensori di un robot che non ha un'implementazione <code>ROS2</code> attraverso l'uso di un programma <code>ROS2</code>.</p>
       </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
       <ul class="list-disc list-inside inner-list">
@@ -104,15 +104,15 @@ import ProjectDescription from "../../components/ProjectDescription.astro";
         <Badge text="PHP" />
       </div>
       <ProjectDescription id="project-casa-tracking-descr" cssClasses="mt-2 mb-2">
-        <p class="mt-1">Di seguito verranno descritte le funzionalità dell'applicazione creata nel progetto:</p>
+        <p class="mt-2">Di seguito verranno descritte le funzionalità dell'applicazione creata nel progetto:</p>
         <ul class="list-disc list-inside inner-list">
-          <li class="mt-1">Geolocalizzazione dell'utente su una mappa Google Maps con percorsi e aree sicure.</li>
-          <li class="mt-1">Alert all'utente con segnale sonoro e vibrazione in caso di allontanamento dall'area sicura e popup con possibilità di chiamata all'educatore.</li>
-          <li class="mt-1">Invio di <code>SMS</code> all'educatore contenente un link Google Maps con la posizione attuale dell'utente in caso di allontanamento dall'area sicura.</li>
-          <li class="mt-1">Chiamata e <code>SMS</code> (con link Google Maps) all'educatore disponibili in qualsiasi momento con la pressione del bottone <code>SOS</code>.</li>
-          <li class="mt-1">Possibilità dell'utente di consultare una mappa Google Maps con un segnalatore che corrisponde alla sua posizione in tempo reale.</li>
-          <li class="mt-1">Possibilità dell'utente di scegliere un percorso. In esso, l'utente viene guidato passo passo verso i diversi punti di interesse che lo compongono.</li>
-          <li class="mt-1">Possibilità dell'educatore di conoscere la posizione dell'utente e controllare in qualsiasi momento se esso si trova nell'area sicura. L'implementazione di questa funzionalità ha richiesto l'utilizzo delle notifiche Firebase e lo sviluppo di un'applicazione web <code>PHP</code> utilizzabile dall'educatore.</li>
+          <li class="mt-2">Geolocalizzazione dell'utente su una mappa Google Maps con percorsi e aree sicure.</li>
+          <li class="mt-2">Alert all'utente con segnale sonoro e vibrazione in caso di allontanamento dall'area sicura e popup con possibilità di chiamata all'educatore.</li>
+          <li class="mt-2">Invio di <code>SMS</code> all'educatore contenente un link Google Maps con la posizione attuale dell'utente in caso di allontanamento dall'area sicura.</li>
+          <li class="mt-2">Chiamata e <code>SMS</code> (con link Google Maps) all'educatore disponibili in qualsiasi momento con la pressione del bottone <code>SOS</code>.</li>
+          <li class="mt-2">Possibilità dell'utente di consultare una mappa Google Maps con un segnalatore che corrisponde alla sua posizione in tempo reale.</li>
+          <li class="mt-2">Possibilità dell'utente di scegliere un percorso. In esso, l'utente viene guidato passo passo verso i diversi punti di interesse che lo compongono.</li>
+          <li class="mt-2">Possibilità dell'educatore di conoscere la posizione dell'utente e controllare in qualsiasi momento se esso si trova nell'area sicura. L'implementazione di questa funzionalità ha richiesto l'utilizzo delle notifiche Firebase e lo sviluppo di un'applicazione web <code>PHP</code> utilizzabile dall'educatore.</li>
         </ul>
       </ProjectDescription>
       <h3 class="text-sm font-semibold mt-2 mb-2">Autori:</h3>
