@@ -37,3 +37,8 @@ user@host:~$ npm run dev
 user@host:~$ npm run build
 user@host:~$ npx browser-sync start --server
 ```
+
+## Using Nix flake
+```bash
+user@host:~$ nix develop
+```
