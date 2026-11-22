@@ -1,0 +1,27 @@
+---
+import { site } from "../data/content";
+import CtaButton from "../components/CtaButton.astro";
+---
+
+<section class="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+  <p class="mb-4 font-mono text-sm text-accent-strong dark:text-accent">
+    &gt; hello, my name is
+  </p>
+  <h1
+    class="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50"
+  >
+    {site.name}
+  </h1>
+  <p
+    class="mt-3 font-mono text-xl text-zinc-600 sm:text-2xl dark:text-zinc-400"
+  >
+    {site.role}
+  </p>
+  <p class="mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-300">
+    {site.tagline}
+  </p>
+
+  <div class="mt-10 flex flex-wrap gap-4">
+    <CtaButton href="#contact" variant="primary">Get in touch</CtaButton>
+  </div>
+</section>

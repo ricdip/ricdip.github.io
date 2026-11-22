@@ -1,0 +1,43 @@
+---
+import { focus } from "../data/content";
+import Section from "../components/Section.astro";
+
+// One icon per card, selected by index — kept here so the data stays plain text.
+const icons = [
+  // Backend / server stack
+  `<rect x="3" y="4" width="18" height="6" rx="1"></rect><rect x="3" y="14" width="18" height="6" rx="1"></rect><line x1="7" y1="7" x2="7.01" y2="7"></line><line x1="7" y1="17" x2="7.01" y2="17"></line>`,
+  // Microservices / connected nodes
+  `<circle cx="12" cy="5" r="2"></circle><circle cx="5" cy="19" r="2"></circle><circle cx="19" cy="19" r="2"></circle><line x1="12" y1="7" x2="12" y2="12"></line><line x1="12" y1="12" x2="6" y2="17"></line><line x1="12" y1="12" x2="18" y2="17"></line>`,
+  // Containers / box
+  `<path d="M21 8l-9-5-9 5 9 5 9-5z"></path><path d="M3 8v8l9 5 9-5V8"></path><line x1="12" y1="13" x2="12" y2="21"></line>`,
+];
+---
+
+<Section id="work" title="What I work on" index={1}>
+  <div class="grid gap-6 sm:grid-cols-3">
+    {
+      focus.map((item, i) => (
+        <article class="rounded-sm border border-zinc-200 p-6 transition-colors hover:border-accent dark:border-zinc-800 dark:hover:border-accent">
+          <svg
+            class="mb-4 h-7 w-7 text-accent-strong dark:text-accent"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            set:html={icons[i]}
+          />
+          <h3 class="mb-2 text-base font-semibold text-zinc-900 dark:text-zinc-50">
+            {item.title}
+          </h3>
+          <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+            {item.description}
+          </p>
+        </article>
+      ))
+    }
+  </div>
+</Section>

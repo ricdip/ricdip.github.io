@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import { site, languages } from "../data/content";
+import Section from "../components/Section.astro";
+import Badge from "../components/Badge.astro";
+import profile from "../assets/profile.jpg";
+---
+
+<Section id="about" title="About" index={7}>
+  <div class="grid gap-10 md:grid-cols-3">
+    <div class="md:col-span-2">
+      <div class="mb-6 flex items-center gap-5">
+        <Image
+          src={profile}
+          alt={site.name}
+          width={240}
+          height={240}
+          class="h-24 w-24 rounded-full border-2 border-zinc-300 object-cover dark:border-zinc-700"
+        />
+        <p class="font-mono text-sm text-accent-strong dark:text-accent">
+          &gt; whoami
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {
+          site.aboutNarrative.map((para) => (
+            <p class="text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
+              {para}
+            </p>
+          ))
+        }
+      </div>
+    </div>
+
+    <div>
+      <h3
+        class="mb-4 font-mono text-sm font-semibold text-zinc-900 dark:text-zinc-100"
+      >
+        Languages
+      </h3>
+      <ul class="space-y-2">
+        {
+          languages.map((lang) => (
+            <li class="flex items-center justify-between gap-3">
+              <span class="text-sm text-zinc-700 dark:text-zinc-300">
+                {lang.name}
+              </span>
+              <Badge variant="muted">{lang.level}</Badge>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Section>

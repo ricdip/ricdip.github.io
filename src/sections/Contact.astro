@@ -1,0 +1,76 @@
+---
+import { site } from "../data/content";
+import Section from "../components/Section.astro";
+import CvButton from "../components/CvButton.astro";
+
+const links = [
+  {
+    label: "GitHub",
+    value: "github.com/ricdip",
+    href: site.github,
+  },
+  {
+    label: "LinkedIn",
+    value: "riccardo-armando-di-prinzio",
+    href: site.linkedin,
+  },
+];
+---
+
+<Section id="contact" title="Contact" index={8}>
+  <p class="max-w-2xl text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
+    Feel free to reach out — whether about a project, a collaboration, or just
+    to chat about backend, software engineering and systems administration.
+  </p>
+
+  <ul class="mt-8 space-y-3">
+    {
+      links.map((c) => (
+        <li class="flex items-center gap-3">
+          <span class="w-20 font-mono text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            {c.label}
+          </span>
+          <a
+            href={c.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-mono text-sm text-zinc-800 transition-colors hover:text-accent-strong dark:text-zinc-200 dark:hover:text-accent"
+          >
+            {c.value}
+          </a>
+        </li>
+      ))
+    }
+
+    <!-- Email: assembled client-side from parts so the full address never
+         appears in the static HTML source (deters scrapers). -->
+    <li class="flex items-center gap-3">
+      <span class="w-20 font-mono text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+        Email
+      </span>
+      <a
+        id="email-link"
+        data-user={site.emailUser}
+        data-domain={site.emailDomain}
+        class="font-mono text-sm text-zinc-800 transition-colors hover:text-accent-strong dark:text-zinc-200 dark:hover:text-accent"
+      >
+        <noscript>enable JavaScript to view</noscript>
+      </a>
+    </li>
+  </ul>
+
+  <div class="mt-10">
+    <CvButton variant="primary" />
+  </div>
+</Section>
+
+<script>
+  const el = document.getElementById("email-link");
+  if (el) {
+    const user = el.dataset.user ?? "";
+    const domain = el.dataset.domain ?? "";
+    const address = `${user}@${domain}`;
+    el.setAttribute("href", `mailto:${address}`);
+    el.textContent = address;
+  }
+</script>

@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+import { site } from "../data/content";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = `${site.name} — ${site.role}`,
+  description = `Portfolio of ${site.name}, ${site.role}.`,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- No-FOUC theme script: runs before paint so there is no flash of the
+         wrong theme. Defaults to the system preference when nothing is stored. -->
+    <script is:inline>
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      const dark = stored ? stored === "dark" : prefersDark;
+      document.documentElement.classList.toggle("dark", dark);
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body
+    class="min-h-screen bg-white font-sans text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-200"
+  >
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

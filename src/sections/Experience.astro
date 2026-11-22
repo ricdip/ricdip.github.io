@@ -1,0 +1,42 @@
+---
+import { experience } from "../data/content";
+import Section from "../components/Section.astro";
+import Badge from "../components/Badge.astro";
+---
+
+<Section id="experience" title="Experience" index={2}>
+  <ol class="relative space-y-10 border-l border-zinc-200 pl-6 dark:border-zinc-800">
+    {
+      experience.map((item) => (
+        <li class="relative">
+          <span
+            class="absolute -left-[1.6rem] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-white dark:bg-zinc-950"
+            aria-hidden="true"
+          />
+          <p class="font-mono text-xs text-accent-strong dark:text-accent">
+            {item.period}
+          </p>
+          <h3 class="mt-1 text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+            {item.role}
+          </h3>
+          <p class="text-sm text-zinc-600 dark:text-zinc-400">
+            {item.company} · {item.location}
+          </p>
+          <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+            {item.description}
+          </p>
+          <ul class="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-zinc-600 marker:text-accent-strong dark:text-zinc-300 dark:marker:text-accent">
+            {item.highlights.map((h) => (
+              <li>{h}</li>
+            ))}
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {item.tech.map((t) => (
+              <Badge>{t}</Badge>
+            ))}
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</Section>

@@ -1,0 +1,37 @@
+---
+// "Request CV" button. The CV is only sent by email on request — never hosted
+// for public download. The mailto is assembled client-side from the obfuscated
+// parts, so the address never appears in the static HTML source.
+import { site } from "../data/content";
+import { buttonBase, buttonVariants } from "../lib/buttonStyles";
+
+interface Props {
+  variant?: "primary" | "ghost";
+}
+const { variant = "ghost" } = Astro.props;
+---
+
+<a
+  data-cv-request
+  data-user={site.emailUser}
+  data-domain={site.emailDomain}
+  data-subject="CV request"
+  class:list={[buttonBase, buttonVariants[variant]]}
+>
+  Request CV
+</a>
+
+<script>
+  // Assemble the mailto for the CV-request button once, at runtime.
+  document
+    .querySelectorAll<HTMLAnchorElement>("[data-cv-request]")
+    .forEach((el) => {
+      const user = el.dataset.user ?? "";
+      const domain = el.dataset.domain ?? "";
+      const subject = el.dataset.subject ?? "CV request";
+      el.setAttribute(
+        "href",
+        `mailto:${user}@${domain}?subject=${encodeURIComponent(subject)}`,
+      );
+    });
+</script>

@@ -1,0 +1,47 @@
+---
+// Shared call-to-action button.
+// - variant "primary" = accent filled; "ghost" = outlined.
+// - When `disabled`, renders a non-interactive <button> instead of an <a>, so a
+//   placeholder link never produces a dead link / 404.
+import { buttonBase, buttonVariants, buttonDisabled } from "../lib/buttonStyles";
+
+interface Props {
+  href?: string;
+  variant?: "primary" | "ghost";
+  disabled?: boolean;
+  download?: boolean;
+  title?: string;
+  class?: string;
+}
+const {
+  href,
+  variant = "primary",
+  disabled = false,
+  download = false,
+  title,
+  class: className,
+} = Astro.props;
+---
+
+{
+  disabled ? (
+    <button
+      type="button"
+      disabled
+      aria-disabled="true"
+      title={title}
+      class:list={[buttonBase, buttonDisabled, className]}
+    >
+      <slot />
+    </button>
+  ) : (
+    <a
+      href={href}
+      title={title}
+      download={download ? "" : undefined}
+      class:list={[buttonBase, buttonVariants[variant], className]}
+    >
+      <slot />
+    </a>
+  )
+}
