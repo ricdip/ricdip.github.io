@@ -114,7 +114,7 @@ export const experience: ExperienceItem[] = [
     company: "Smart Shaped Software",
     location: "Pescara, Italy",
     role: "Backend Developer",
-    period: "01/2024 – present",
+    period: "01/2024 - present",
     description:
       "Hired by Smart Shaped Software as an external consultant for Tinexta Cyber, working on backend microservices.",
     highlights: [
@@ -127,13 +127,13 @@ export const experience: ExperienceItem[] = [
     company: "Smart Shaped Software",
     location: "Pescara, Italy",
     role: "Fullstack Developer Intern",
-    period: "11/2023 – 01/2024",
+    period: "11/2023 - 01/2024",
     description:
       "Internship on fullstack development, later converted into a backend developer role.",
     highlights: [
       "Developing backend applications with the Java Spring Boot framework.",
       "Developing frontend applications with the Angular framework.",
-      "Building microservice-based applications with Docker, Docker Compose and Kubernetes.",
+      "Building microservice-based applications with Docker, Docker Compose, and Kubernetes.",
     ],
     tech: ["Spring Boot", "Angular", "Docker", "Docker Compose", "Kubernetes"],
   },
@@ -141,7 +141,7 @@ export const experience: ExperienceItem[] = [
     company: "University of L'Aquila",
     location: "L'Aquila, Italy",
     role: "Master's Thesis Internship",
-    period: "11/2020 – 12/2020",
+    period: "11/2020 - 12/2020",
     description:
       "100-hour internship during the First-Level Master, focused on server- and client-side development for the Univaq application.",
     highlights: [
@@ -233,14 +233,14 @@ export const projects: Project[] = [
   {
     name: "Master's Thesis - Walking Bus Group Management System",
     summary:
-      "Group management system with three apps (admin webapp, tutor mobile app, parent mobile app): real-time GPS tracking and geofencing alerts and monitoring via iBeacon.",
+      "Group management system with three apps (admin webapp, tutor mobile app, parent mobile app): real-time GPS tracking, geofencing alerts, and iBeacon-based monitoring.",
     tech: ["Android (Kotlin)", "Spring Boot", "iBeacon", "Firebase", "REST APIs"],
     closedSource: true,
   },
   {
     name: "Bachelor's Thesis - Casa Tracking Android App",
     summary:
-      "Outdoor tracking app for cognitively disabled individuals: Google Maps, geofencing, SOS and SMS notifications.",
+      "Outdoor tracking app for people with cognitive disabilities: Google Maps, geofencing, SOS, and SMS notifications.",
     tech: ["Android (Java)", "PHP", "Firebase", "Google Maps"],
     closedSource: true,
   },
@@ -254,21 +254,21 @@ export const projects: Project[] = [
   {
     name: "Toy Language Interpreter",
     summary:
-      "A tree-walking interpreter for a small language, written in Java: integers, booleans, strings, arrays, variables and operators with precedence.",
+      "A tree-walking interpreter for a small language, written in Java: integers, booleans, strings, arrays, variables, and operators with precedence.",
     tech: ["Java", "Interpreter", "Pratt parsing"],
     url: "https://github.com/ricdip/SimpleInterpreter",
   },
   {
     name: "CHIP-8 Emulator",
     summary:
-      "A CHIP-8 virtual machine in Java - all 35 opcodes, 64×32 display, stack and timers - running ROMs from a configurable CLI.",
+      "A CHIP-8 virtual machine in Java - all 35 opcodes, 64x32 display, stack and timers - running ROMs from a configurable CLI.",
     tech: ["Java", "Emulation", "Virtual machine"],
     url: "https://github.com/ricdip/java-chip8",
   },
   {
     name: "Mediary",
     summary:
-      "A modular-monolith Spring Boot application to track your progress through anime, manga and TV series - marking episodes and chapters as watched or read - with Keycloak-based authentication.",
+      "A modular-monolith Spring Boot application to track your progress through anime, manga, and TV series - marking episodes and chapters as watched or read - with Keycloak-based authentication.",
     tech: ["Java", "Spring Boot", "Modular monolith", "Keycloak"],
     planned: true,
   },
@@ -276,26 +276,26 @@ export const projects: Project[] = [
 
 export const education: EducationItem[] = [
   {
-    title: "First-Level Master",
-    field: "Mobile & Web Technologies",
-    institution: "University of L'Aquila",
-    period: "2019 – 2020",
-    grade: "70/70 cum laude",
-  },
-  {
     title: "Master's Degree",
     field: "Computer Science",
     institution: "University of L'Aquila",
-    period: "2018 – 2022",
+    period: "2018 - 2022",
     grade: "110/110 cum laude",
     thesis:
       "Design and development of a system for managing walking bus groups.",
   },
   {
+    title: "First-Level Master",
+    field: "Mobile & Web Technologies",
+    institution: "University of L'Aquila",
+    period: "2019 - 2020",
+    grade: "70/70 cum laude",
+  },
+  {
     title: "Bachelor's Degree",
     field: "Computer Science",
     institution: "University of L'Aquila",
-    period: "2013 – 2018",
+    period: "2013 - 2018",
     grade: "101/110",
     thesis:
       "Development of an Android app for outdoor tracking of people with cognitive disabilities.",
@@ -320,8 +320,8 @@ export const certifications: Certification[] = [
   {
     name: "Master Microservices with Spring Boot and Spring Cloud",
     issuer: "Udemy",
-    date: "28 Nov 2023",
-    content: "Spring Boot, Spring Cloud, Docker, Kubernetes and REST APIs",
+    date: "28 November 2023",
+    content: "Spring Boot, Spring Cloud, Docker, Kubernetes, and REST APIs",
     duration: "24.5 hours",
   },
 ];
