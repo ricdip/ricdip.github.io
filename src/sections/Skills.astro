@@ -25,14 +25,14 @@ import Badge from "../components/Badge.astro";
             {row.main.length > 0 ? (
               row.main.map((s) => <Badge variant="accent">{s}</Badge>)
             ) : (
-              <span class="text-sm text-zinc-400 dark:text-zinc-600">—</span>
+              <span class="text-sm text-zinc-400 dark:text-zinc-600">-</span>
             )}
           </div>
           <div class="col-span-4 flex flex-wrap items-start gap-2">
             {row.familiar.length > 0 ? (
               row.familiar.map((s) => <Badge>{s}</Badge>)
             ) : (
-              <span class="text-sm text-zinc-400 dark:text-zinc-600">—</span>
+              <span class="text-sm text-zinc-400 dark:text-zinc-600">-</span>
             )}
           </div>
         </div>

@@ -3,7 +3,7 @@
 @import "@fontsource-variable/jetbrains-mono";
 
 /* Dark mode driven by a `.dark` class on <html> (set by the no-FOUC script and
-   toggle), not the media query — so the user's choice can override the system
+   toggle), not the media query - so the user's choice can override the system
    preference. This is the Tailwind v4 equivalent of `darkMode: 'class'`. */
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -11,7 +11,7 @@
   --font-sans: "Inter Variable", system-ui, sans-serif;
   --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
 
-  /* Accent — amber. Exposed as `accent` / `accent-strong` utility colors
+  /* Accent - amber. Exposed as `accent` / `accent-strong` utility colors
      (e.g. bg-accent, text-accent-strong). */
   --color-accent: oklch(0.769 0.16 70.08); /* amber-500 */
   --color-accent-strong: oklch(0.666 0.145 58.32); /* darker, for hover + text on light bg */

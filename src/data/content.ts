@@ -1,5 +1,5 @@
 // Single source of truth for all portfolio content.
-// Section components import from here and map over the data — no hardcoded copy
+// Section components import from here and map over the data - no hardcoded copy
 // lives in the .astro markup. Edit content here only.
 
 export interface NavLink {
@@ -65,18 +65,17 @@ export const site = {
   tagline:
     "Backend developer building microservice-based systems with Java and Spring Boot.",
   aboutNarrative: [
-    "Hi, I'm Riccardo. Computer science and technology have been my passion for as long as I can remember — it's what drove me to earn a Master's degree in Computer Science and a first-level Master in Mobile & Web Technologies at the University of L'Aquila.",
-    "I got into programming and software development early on, and I've been building with modern web and mobile technologies ever since, including Spring Boot, Android, and Angular.",
+    "Hi, I'm Riccardo. Computer science and technology have been my passion for as long as I can remember - it's what drove me to earn a Master's degree in Computer Science and a first-level Master in Mobile & Web Technologies at the University of L'Aquila.",
+    "From my early university years I became interested in programming and software development. Along the way I've worked with current web and mobile technologies, including Spring Boot, Android, and Angular.",
     "Today I work as a Backend Developer at Smart Shaped Software (Pescara), as an external consultant for Tinexta Cyber. I work mainly with Java and Spring Boot, building microservice-based applications with Docker, and I've used Keycloak for identity and access management.",
-    "Beyond work, I'm a long-time Linux enthusiast — I run it daily across several distributions (Ubuntu, Debian, Arch, NixOS), enjoy Nix, and like tinkering with and self-hosting my own setups.",
+    "Beyond work, I'm a long-time Linux enthusiast - I run it daily across several distributions (Ubuntu, Debian, Arch, NixOS), enjoy Nix, like tinkering with my own setups, and I'm keen to get into self-hosting.",
     "Away from the keyboard, I'm into anime and manga, play Dungeons & Dragons, and I'm currently learning to play the guitar.",
   ],
-  // The CV is never hosted for public download — it's sent by email on request.
+  // The CV is never hosted for public download - it's sent by email on request.
   github: "https://github.com/ricdip",
   linkedin: "https://www.linkedin.com/in/riccardo-armando-di-prinzio",
   // Obfuscated to deter scrapers: assembled client-side from these parts, never
-  // present as a complete address in the HTML source. TODO: fill with the real
-  // personal address (user + domain, e.g. "name" + "gmail.com").
+  // present as a complete address in the HTML source.
   emailUser: "riccardoarmando.diprinzio",
   emailDomain: "gmail.com",
 } as const;
@@ -158,17 +157,17 @@ export const skills: SkillRow[] = [
   {
     category: "Backend",
     main: ["Java", "Spring Boot", "OpenAPI"],
-    familiar: ["Go", "Python", "Rust", "PHP/Laravel"],
+    familiar: ["Python", "Go", "C/C++", "Rust", "PHP/Laravel"],
   },
   {
     category: "Spring ecosystem",
-    main: ["Spring Data JPA", "QueryDSL", "Spring Security"],
+    main: ["Spring Data JPA", "QueryDSL"],
     familiar: ["Spring Cloud"],
   },
   {
     category: "Database",
-    main: ["PostgreSQL", "OracleDB", "SQL Server"],
-    familiar: ["MongoDB", "MariaDB"],
+    main: ["OracleDB", "SQL Server", "PostgreSQL"],
+    familiar: ["MariaDB", "MongoDB"],
   },
   {
     category: "Messaging",
@@ -177,13 +176,13 @@ export const skills: SkillRow[] = [
   },
   {
     category: "Security",
-    main: ["Keycloak", "Spring Security"],
+    main: ["Keycloak", "JWT", "JWKS", "Spring Security"],
     familiar: [],
   },
   {
     category: "DevOps/CI",
     main: ["Docker", "Docker Compose"],
-    familiar: ["Kubernetes", "Jenkins"],
+    familiar: ["Jenkins", "Kubernetes"],
   },
   {
     category: "Testing & Quality",
@@ -232,14 +231,14 @@ export const skills: SkillRow[] = [
 
 export const projects: Project[] = [
   {
-    name: "Master's Thesis — Walking Bus Group Management System",
+    name: "Master's Thesis - Walking Bus Group Management System",
     summary:
-      "Group management system with three apps (admin web, tutor mobile, parent mobile): real-time GPS tracking and geofencing alerts via iBeacon.",
+      "Group management system with three apps (admin webapp, tutor mobile app, parent mobile app): real-time GPS tracking and geofencing alerts and monitoring via iBeacon.",
     tech: ["Android (Kotlin)", "Spring Boot", "iBeacon", "Firebase", "REST APIs"],
     closedSource: true,
   },
   {
-    name: "Bachelor's Thesis — Casa Tracking Android App",
+    name: "Bachelor's Thesis - Casa Tracking Android App",
     summary:
       "Outdoor tracking app for cognitively disabled individuals: Google Maps, geofencing, SOS and SMS notifications.",
     tech: ["Android (Java)", "PHP", "Firebase", "Google Maps"],
@@ -248,7 +247,7 @@ export const projects: Project[] = [
   {
     name: "D&D Dice Interpreter",
     summary:
-      "A Java interpreter for Dungeons & Dragons dice notation, with a recursive-descent/Pratt parser that rolls all dice (d4–d100) and evaluates arithmetic with correct precedence.",
+      "A Java interpreter for Dungeons & Dragons dice notation, with a recursive-descent/Pratt parser that rolls all dice (d4, d6, d8, d10, d12, d20, d100) and evaluates arithmetic with correct precedence.",
     tech: ["Java", "Interpreter", "Pratt parsing"],
     url: "https://github.com/ricdip/DiceRoller",
   },
@@ -262,15 +261,14 @@ export const projects: Project[] = [
   {
     name: "CHIP-8 Emulator",
     summary:
-      "A CHIP-8 virtual machine in Java — all 35 opcodes, 64×32 display, stack and timers — running ROMs from a configurable CLI.",
+      "A CHIP-8 virtual machine in Java - all 35 opcodes, 64×32 display, stack and timers - running ROMs from a configurable CLI.",
     tech: ["Java", "Emulation", "Virtual machine"],
     url: "https://github.com/ricdip/java-chip8",
   },
   {
-    // Working name — may change before release.
     name: "Mediary",
     summary:
-      "A modular-monolith Spring Boot application to track your progress through anime, manga and TV series — marking episodes and chapters as watched or read — with Keycloak-based authentication.",
+      "A modular-monolith Spring Boot application to track your progress through anime, manga and TV series - marking episodes and chapters as watched or read - with Keycloak-based authentication.",
     tech: ["Java", "Spring Boot", "Modular monolith", "Keycloak"],
     planned: true,
   },
@@ -309,14 +307,14 @@ export const certifications: Certification[] = [
     name: "GitLab & CI/CD",
     issuer: "Udemy",
     date: "27 May 2024",
-    content: "GitLab and CI/CD",
+    content: "GitLab basics, CI/CD, pipelines, and DevOps workflows",
     duration: "3.5 hours",
   },
   {
     name: "The Git & GitHub Bootcamp",
     issuer: "Udemy",
     date: "20 May 2024",
-    content: "Git and GitHub",
+    content: "Git and GitHub: rebasing, squashing, stashing, reflog, and Git internals",
     duration: "17 hours",
   },
   {

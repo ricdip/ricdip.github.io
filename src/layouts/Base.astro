@@ -9,9 +9,12 @@ interface Props {
   description?: string;
 }
 const {
-  title = `${site.name} — ${site.role}`,
+  title = `${site.name} - ${site.role}`,
   description = `Portfolio of ${site.name}, ${site.role}.`,
 } = Astro.props;
+
+// Absolute canonical URL for this page (used by the canonical link + Open Graph).
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -32,8 +35,33 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Google Search Console verification -->
+    <meta
+      name="google-site-verification"
+      content="Rb5lT0iPt1FyFSaMQkdTz-yai-MEK2Vid_wc94wG0AA"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content={site.name} />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
   </head>
   <body
     class="min-h-screen bg-white font-sans text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-200"
