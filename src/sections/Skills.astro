@@ -5,10 +5,12 @@ import Badge from "../components/Badge.astro";
 ---
 
 <Section id="skills" title="Skills" index={5}>
-  <div class="space-y-px overflow-hidden rounded-sm border border-zinc-200 dark:border-zinc-800">
+  <div
+    class="space-y-px overflow-hidden rounded-sm border border-zinc-200 dark:border-zinc-800"
+  >
     <!-- Column headers (hidden on mobile where rows stack) -->
     <div
-      class="hidden grid-cols-12 gap-4 bg-zinc-100 px-4 py-3 font-mono text-xs uppercase tracking-wide text-zinc-500 sm:grid dark:bg-zinc-900 dark:text-zinc-400"
+      class="hidden grid-cols-12 gap-4 bg-zinc-100 px-4 py-3 font-mono text-xs tracking-wide text-zinc-500 uppercase sm:grid dark:bg-zinc-900 dark:text-zinc-400"
     >
       <div class="col-span-3">Category</div>
       <div class="col-span-5">Main</div>

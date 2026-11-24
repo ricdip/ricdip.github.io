@@ -5,12 +5,14 @@ import Badge from "../components/Badge.astro";
 ---
 
 <Section id="experience" title="Experience" index={2}>
-  <ol class="relative space-y-10 border-l border-zinc-200 pl-6 dark:border-zinc-800">
+  <ol
+    class="relative space-y-10 border-l border-zinc-200 pl-6 dark:border-zinc-800"
+  >
     {
       experience.map((item) => (
         <li class="relative">
           <span
-            class="absolute -left-[1.6rem] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-white dark:bg-zinc-950"
+            class="absolute top-1.5 -left-[1.6rem] h-3 w-3 rounded-full border-2 border-accent bg-white dark:bg-zinc-950"
             aria-hidden="true"
           />
           <p class="font-mono text-xs text-accent-strong dark:text-accent">

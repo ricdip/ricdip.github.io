@@ -234,7 +234,13 @@ export const projects: Project[] = [
     name: "Master's Thesis - Walking Bus Group Management System",
     summary:
       "Group management system with three apps (admin webapp, tutor mobile app, parent mobile app): real-time GPS tracking, geofencing alerts, and iBeacon-based monitoring.",
-    tech: ["Android (Kotlin)", "Spring Boot", "iBeacon", "Firebase", "REST APIs"],
+    tech: [
+      "Android (Kotlin)",
+      "Spring Boot",
+      "iBeacon",
+      "Firebase",
+      "REST APIs",
+    ],
     closedSource: true,
   },
   {
@@ -314,7 +320,8 @@ export const certifications: Certification[] = [
     name: "The Git & GitHub Bootcamp",
     issuer: "Udemy",
     date: "20 May 2024",
-    content: "Git and GitHub: rebasing, squashing, stashing, reflog, and Git internals",
+    content:
+      "Git and GitHub: rebasing, squashing, stashing, reflog, and Git internals",
     duration: "17 hours",
   },
   {
