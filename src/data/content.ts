@@ -67,7 +67,7 @@ export const site = {
   aboutNarrative: [
     "Hi, I'm Riccardo. Computer science and technology have been my passion for as long as I can remember - it's what drove me to earn a Master's degree in Computer Science and a first-level Master in Mobile & Web Technologies at the University of L'Aquila.",
     "From my early university years I became interested in programming and software development. Along the way I've worked with web and mobile technologies, including Spring Boot, Android, and Angular.",
-    "Today I work as a Backend Developer at Smart Shaped Software (Pescara), as an external consultant for Tinexta Cyber, on backend services for banking and insurance applications. I work mainly with Java and Spring Boot - building both modular monoliths and microservices, containerized with Docker - and I handle authentication and authorization with Spring Security, Keycloak, and JWT/JWKS.",
+    "Today I work as a Backend Developer at Smart Shaped Software (Pescara), as an external consultant for Tinexta Cyber, on backend services for banking and insurance applications. I work mainly with Java and Spring Boot - building both modular monoliths and microservices, containerized with Docker - where authentication and authorization are handled through Spring Security, Keycloak, and JWT/JWKS.",
     "Beyond work, I'm a long-time Linux enthusiast - I run it daily across several distributions (Ubuntu, Debian, Arch, NixOS), enjoy Nix, like tinkering with my own setups, and I'm keen to get into self-hosting.",
     "Away from the keyboard, I'm into anime and manga, play Dungeons & Dragons, and I'm currently learning to play the guitar.",
   ],
