@@ -63,11 +63,11 @@ export const site = {
   name: "Riccardo Armando Di Prinzio",
   role: "Backend Developer",
   tagline:
-    "Backend developer building microservice-based systems with Java and Spring Boot.",
+    "Backend developer building microservices and modular monoliths with Java and Spring Boot.",
   aboutNarrative: [
     "Hi, I'm Riccardo. Computer science and technology have been my passion for as long as I can remember - it's what drove me to earn a Master's degree in Computer Science and a first-level Master in Mobile & Web Technologies at the University of L'Aquila.",
-    "From my early university years I became interested in programming and software development. Along the way I've worked with current web and mobile technologies, including Spring Boot, Android, and Angular.",
-    "Today I work as a Backend Developer at Smart Shaped Software (Pescara), as an external consultant for Tinexta Cyber. I work mainly with Java and Spring Boot, building microservice-based applications with Docker, and I've used Keycloak for identity and access management.",
+    "From my early university years I became interested in programming and software development. Along the way I've worked with web and mobile technologies, including Spring Boot, Android, and Angular.",
+    "Today I work as a Backend Developer at Smart Shaped Software (Pescara), as an external consultant for Tinexta Cyber, on backend services for banking and insurance applications. I work mainly with Java and Spring Boot - building both modular monoliths and microservices, containerized with Docker - and I handle authentication and authorization with Spring Security, Keycloak, and JWT/JWKS.",
     "Beyond work, I'm a long-time Linux enthusiast - I run it daily across several distributions (Ubuntu, Debian, Arch, NixOS), enjoy Nix, like tinkering with my own setups, and I'm keen to get into self-hosting.",
     "Away from the keyboard, I'm into anime and manga, play Dungeons & Dragons, and I'm currently learning to play the guitar.",
   ],
@@ -116,12 +116,23 @@ export const experience: ExperienceItem[] = [
     role: "Backend Developer",
     period: "01/2024 - present",
     description:
-      "Hired by Smart Shaped Software as an external consultant for Tinexta Cyber, working on backend microservices.",
+      "Hired by Smart Shaped Software as an external consultant for Tinexta Cyber, working on backend services for banking and insurance applications.",
     highlights: [
-      "Developing backend applications with the Java Spring Boot framework.",
-      "Building microservice-based applications with Docker and Docker Compose.",
+      "Designed and built backend services from scratch with Java and Spring Boot - both modular monoliths and microservices - containerized with Docker and Docker Compose.",
+      "Implemented authentication and authorization with Spring Security, Keycloak, and JWT/JWKS.",
+      "Designed and exposed REST APIs backed by relational data access with Spring Data JPA and QueryDSL.",
+      "Ensured code quality with unit and integration tests (JUnit, Testcontainers) and SonarQube static analysis.",
     ],
-    tech: ["Java", "Spring Boot", "Docker", "Docker Compose", "Microservices"],
+    tech: [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "Modular monoliths",
+      "Keycloak",
+      "Spring Security",
+      "Docker",
+      "Docker Compose",
+    ],
   },
   {
     company: "Smart Shaped Software",
@@ -186,7 +197,7 @@ export const skills: SkillRow[] = [
   },
   {
     category: "Testing & Quality",
-    main: ["JUnit", "SonarQube"],
+    main: ["JUnit", "Testcontainers", "SonarQube"],
     familiar: [],
   },
   {
@@ -260,8 +271,8 @@ export const projects: Project[] = [
   {
     name: "Toy Language Interpreter",
     summary:
-      "A tree-walking interpreter for a small language, written in Java: integers, booleans, strings, arrays, variables, and operators with precedence.",
-    tech: ["Java", "Interpreter", "Pratt parsing"],
+      "A tree-walking interpreter for a small language, written in Java: integers, booleans, strings, and arrays; variables, first-class functions with closures and recursion, if/else conditionals and while loops, and operators with precedence. Includes built-in functions and array/string indexing with negative indices.",
+    tech: ["Java", "Interpreter", "Pratt parsing", "Closures"],
     url: "https://github.com/ricdip/SimpleInterpreter",
   },
   {
