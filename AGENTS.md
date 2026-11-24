@@ -33,7 +33,17 @@ npm install          # install dependencies
 npm run dev          # start dev server (localhost:4321)
 npm run build        # production build (output: dist/)
 npm run preview      # preview production build locally
+npm run format       # format with Prettier (writes changes)
+npm run format:check # verify formatting without writing (CI-friendly)
 ```
+
+> **Formatter**: Prettier with `prettier-plugin-astro` (`.astro` support) and
+> `prettier-plugin-tailwindcss` (class sorting). `prettier-plugin-astro` is pinned
+> to **`^0.14`** on purpose: its `1.x` rewrite swapped the WASM `@astrojs/compiler`
+> for the native Rust `@astrojs/compiler-rs`, which crashes here with "Illegal
+> instruction" (SIMD/AVX2 — same limitation as Astro 7's rolldown, see above). The
+> `0.14` line uses the WASM compiler (the one `astro build` uses) and runs fine.
+> Do NOT bump `prettier-plugin-astro` to `1.x` until the machine supports AVX2.
 
 A Nix dev shell is available: `nix develop ./devshell` (or `./devshell#nodejsNN`).
 
@@ -58,6 +68,7 @@ Single page (`src/pages/index.astro`) composing section components in order:
 9. **Contact** — GitHub, LinkedIn, obfuscated email, "Request CV"
 
 Directory layout:
+
 - `src/layouts/Base.astro` — html/head, no-FOUC theme script, Header/Footer
 - `src/components/` — reusable primitives (`Section`, `Badge`, `CtaButton`,
   `CvButton`, `ThemeToggle`, `Header`, `Footer`)
