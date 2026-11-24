@@ -24,6 +24,9 @@ import Badge from "../components/Badge.astro";
             {row.category}
           </div>
           <div class="col-span-5 flex flex-wrap items-start gap-2">
+            <span class="w-full font-mono text-xs tracking-wide text-zinc-500 uppercase sm:hidden dark:text-zinc-400">
+              Main
+            </span>
             {row.main.length > 0 ? (
               row.main.map((s) => <Badge variant="accent">{s}</Badge>)
             ) : (
@@ -31,6 +34,9 @@ import Badge from "../components/Badge.astro";
             )}
           </div>
           <div class="col-span-4 flex flex-wrap items-start gap-2">
+            <span class="w-full font-mono text-xs tracking-wide text-zinc-500 uppercase sm:hidden dark:text-zinc-400">
+              Know / have used
+            </span>
             {row.familiar.length > 0 ? (
               row.familiar.map((s) => <Badge>{s}</Badge>)
             ) : (
