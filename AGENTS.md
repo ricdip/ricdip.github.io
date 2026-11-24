@@ -17,7 +17,7 @@ project. English only.
   `@custom-variant`) — there is no `tailwind.config` file.
 - **Fonts**: self-hosted via Fontsource — Inter (body) + JetBrains Mono (accent).
 - **Language**: TypeScript (strict).
-- **Deploy**: GitHub Pages via GitHub Actions (`push` to `main` → build → publish `dist/`).
+- **Deploy**: GitHub Pages via GitHub Actions (`push` to `master` → build → publish `dist/`).
 
 > **Why Astro 5, not 7+**: Astro 7 forces the native `rolldown` bundler, which uses
 > CPU SIMD instructions (AVX2) unsupported by the dev machine — `astro build`/`dev`
@@ -86,7 +86,7 @@ Directory layout:
 - `astro.config.mjs` has `site: 'https://ricdip.github.io'` and **no `base`**
   (user/org site served at the domain root).
 - GitHub Pages source must be set to "GitHub Actions" in repo settings.
-- Deploy triggers on push to `main`.
+- Deploy triggers on push to `master`.
 
 ## Astro documentation
 
