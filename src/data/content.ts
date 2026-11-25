@@ -65,7 +65,7 @@ export const site = {
   tagline:
     "Backend developer building microservices and modular monoliths with Java and Spring Boot.",
   aboutNarrative: [
-    "Hi, I'm Riccardo. Computer science and technology have been my passion for as long as I can remember - it's what drove me to earn a Master's degree in Computer Science and a first-level Master in Mobile & Web Technologies at the University of L'Aquila.",
+    "Hi, I'm Riccardo. Computer science and technology have been my passion for as long as I can remember - it's what drove me to earn a Master's degree in Computer Science and a First-Level Master in Mobile & Web Technologies at the University of L'Aquila.",
     "From my early university years I became interested in programming and software development. Along the way I've worked with web and mobile technologies, including Spring Boot, Android, and Angular.",
     "Today I work as a Backend Developer at Smart Shaped Software (Pescara), as an external consultant for Tinexta Cyber, on backend services for banking and insurance applications. I work mainly with Java and Spring Boot - building both modular monoliths and microservices, containerized with Docker - where authentication and authorization are handled through Spring Security, Keycloak, and JWT/JWKS.",
     "Beyond work, I'm a long-time Linux enthusiast - I run it daily across several distributions (Ubuntu, Debian, Arch, NixOS), enjoy Nix, like tinkering with my own setups, and I'm keen to get into self-hosting.",
@@ -142,11 +142,18 @@ export const experience: ExperienceItem[] = [
     description:
       "Internship on fullstack development, later converted into a backend developer role.",
     highlights: [
-      "Developing backend applications with the Java Spring Boot framework.",
-      "Developing frontend applications with the Angular framework.",
-      "Building microservice-based applications with Docker, Docker Compose, and Kubernetes.",
+      "Developed backend applications with Java and Spring Boot.",
+      "Developed frontend applications with Angular.",
+      "Built microservice-based applications with Docker, Docker Compose, and Kubernetes.",
     ],
-    tech: ["Spring Boot", "Angular", "Docker", "Docker Compose", "Kubernetes"],
+    tech: [
+      "Java",
+      "Spring Boot",
+      "Angular",
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+    ],
   },
   {
     company: "University of L'Aquila",
@@ -177,7 +184,7 @@ export const skills: SkillRow[] = [
   },
   {
     category: "Database",
-    main: ["OracleDB", "SQL Server", "PostgreSQL"],
+    main: ["Oracle DB", "SQL Server", "PostgreSQL"],
     familiar: ["MariaDB", "MongoDB"],
   },
   {
@@ -202,7 +209,7 @@ export const skills: SkillRow[] = [
   },
   {
     category: "Build Tools",
-    main: ["Maven", "Justfile"],
+    main: ["Maven", "just"],
     familiar: ["Make"],
   },
   {
