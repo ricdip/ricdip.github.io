@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+import CtaButton from "../components/CtaButton.astro";
+import { site } from "../data/content";
+---
+
+<Base
+  title={`Page not found - ${site.name}`}
+  description="The page you were looking for doesn't exist."
+>
+  <section
+    class="mx-auto flex max-w-5xl flex-col items-start px-6 py-24 sm:py-32"
+  >
+    <p class="mb-4 font-mono text-sm text-accent-strong dark:text-accent">
+      &gt; 404
+    </p>
+    <h1
+      class="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50"
+    >
+      Page not found
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-300">
+      The page you were looking for doesn't exist or may have moved.
+    </p>
+
+    <div class="mt-10 flex flex-wrap gap-4">
+      <CtaButton href="/" variant="primary">Back to home</CtaButton>
+    </div>
+  </section>
+</Base>
