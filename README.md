@@ -30,6 +30,7 @@ npm install     # install dependencies
 npm run dev     # dev server at http://localhost:4321
 npm run build   # production build → dist/
 npm run preview # preview the production build locally
+npm run og      # regenerate the social share image → public/og.png
 ```
 
 A [Nix](https://nixos.org) dev shell is also available:
@@ -58,11 +59,21 @@ src/
 ├── assets/              # images optimized by astro:assets
 ├── styles/global.css    # Tailwind v4 + theme tokens (zinc + amber accent)
 └── pages/index.astro    # assembles the single page
+
+scripts/generate-og.mjs # generates the Open Graph image (npm run og)
+public/og.png           # generated social share image (1200×630)
 ```
+
+## Social share image
+
+The Open Graph / Twitter card image (`public/og.png`, 1200×630) is a
+typography-only cover generated from the site's own brand fonts by
+`scripts/generate-og.mjs`. Edit the copy or palette constants at the top of that
+script, then run `npm run og` and commit the regenerated PNG.
 
 ## Deployment
 
-Pushing to `main` triggers the GitHub Actions workflow
+Pushing to `master` triggers the GitHub Actions workflow
 (`.github/workflows/deploy.yml`, built on the official `withastro/action`), which
 builds the site and publishes `dist/` to GitHub Pages.
 

@@ -15,6 +15,9 @@ const {
 
 // Absolute canonical URL for this page (used by the canonical link + Open Graph).
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Social share image (public/og.png, 1200x630). Regenerate with `npm run og`.
+const ogImageURL = new URL("/og.png", Astro.site);
 ---
 
 <!doctype html>
@@ -58,12 +61,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content={site.name} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${site.name} - ${site.role}`} />
 
     <!-- Twitter card -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:image:alt" content={`${site.name} - ${site.role}`} />
   </head>
   <body
     class="min-h-screen bg-white font-sans text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-200"

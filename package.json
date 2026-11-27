@@ -11,6 +11,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "og": "node scripts/generate-og.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
@@ -22,6 +23,8 @@
     "@fontsource-variable/inter": "^5.1.0",
     "@fontsource-variable/jetbrains-mono": "^5.1.0",
     "@tailwindcss/vite": "^4.1.0",
+    "@types/fontkit": "^2.0.9",
+    "fontkit": "^3.0.0",
     "prettier": "^3.10.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
