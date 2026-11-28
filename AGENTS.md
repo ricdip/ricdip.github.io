@@ -10,16 +10,16 @@ project. English only.
 
 ## Tech Stack
 
-- **Framework**: Astro **5.x** (pinned to `^5.0.0` — do NOT upgrade to Astro 7+)
+- **Framework**: Astro **5.x** (pinned to `^5.0.0` - do NOT upgrade to Astro 7+)
 - **Styling**: Tailwind CSS v4 via the `@tailwindcss/vite` plugin. CSS-first
   config in `src/styles/global.css` (`@import "tailwindcss"`, `@theme`,
-  `@custom-variant`) — there is no `tailwind.config` file.
-- **Fonts**: self-hosted via Fontsource — Inter (body) + JetBrains Mono (accent).
+  `@custom-variant`) - there is no `tailwind.config` file.
+- **Fonts**: self-hosted via Fontsource - Inter (body) + JetBrains Mono (accent).
 - **Language**: TypeScript (strict).
-- **Deploy**: GitHub Pages via GitHub Actions (`push` to `master` → build → publish `dist/`).
+- **Deploy**: GitHub Pages via GitHub Actions (`push` to `master` -> build -> publish `dist/`).
 
 > **Why Astro 5, not 7+**: Astro 7 forces the native `rolldown` bundler, which uses
-> CPU SIMD instructions (AVX2) unsupported by the dev machine — `astro build`/`dev`
+> CPU SIMD instructions (AVX2) unsupported by the dev machine - `astro build`/`dev`
 > crash with "Illegal instruction (core dumped)". Astro 5 + Vite 8 bundles with
 > rollup (JS) instead and runs fine. Tailwind v4's native binaries
 > (`lightningcss`, `@tailwindcss/oxide`) are compatible and kept. Keep Astro on
@@ -41,7 +41,7 @@ npm run og           # regenerate the Open Graph image (public/og.png)
 > `prettier-plugin-tailwindcss` (class sorting). `prettier-plugin-astro` is pinned
 > to **`^0.14`** on purpose: its `1.x` rewrite swapped the WASM `@astrojs/compiler`
 > for the native Rust `@astrojs/compiler-rs`, which crashes here with "Illegal
-> instruction" (SIMD/AVX2 — same limitation as Astro 7's rolldown, see above). The
+> instruction" (SIMD/AVX2 - same limitation as Astro 7's rolldown, see above). The
 > `0.14` line uses the WASM compiler (the one `astro build` uses) and runs fine.
 > Do NOT bump `prettier-plugin-astro` to `1.x` until the machine supports AVX2.
 
@@ -50,34 +50,34 @@ A Nix dev shell is available: `nix develop ./devshell` (or `./devshell#nodejsNN`
 ## Content model
 
 All site content lives in **`src/data/content.ts`** as typed data (single source
-of truth). Section components only `.map()` over this data — do not hardcode copy
+of truth). Section components only `.map()` over this data - do not hardcode copy
 in the `.astro` markup. To edit text, skills, projects, etc., change `content.ts`.
 
 ## Architecture
 
 Single page (`src/pages/index.astro`) composing section components in order:
 
-1. **Hero** — name, "Backend Developer", tagline, "Get in touch" CTA
-2. **What I work on** (`Focus`) — 3 cards: Backend, Microservices & modular monoliths, Containers
-3. **Experience** — roles with activity bullets + tech badges
-4. **Education** — degrees (English titles), grades, thesis titles
-5. **Certifications** — Udemy courses with content + duration
-6. **Skills** — categorized table (main vs. know/have used)
-7. **Projects** — personal + thesis projects (GitHub links where open source)
-8. **About** — background narrative, Linux passion, personal interests, languages
-9. **Contact** — GitHub, LinkedIn, obfuscated email, "Request CV"
+1. **Hero** - name, "Backend Developer", tagline, "Get in touch" CTA
+2. **What I work on** (`Focus`) - 3 cards: Backend, Microservices & modular monoliths, Containers
+3. **Experience** - roles with activity bullets + tech badges
+4. **Education** - degrees (English titles), grades, thesis titles
+5. **Certifications** - Udemy courses with content + duration
+6. **Skills** - categorized table (main vs. know/have used)
+7. **Projects** - personal + thesis projects (GitHub links where open source)
+8. **About** - background narrative, Linux passion, personal interests, languages
+9. **Contact** - GitHub, LinkedIn, obfuscated email, "Request CV"
 
 Directory layout:
 
-- `src/layouts/Base.astro` — html/head, no-FOUC theme script, Header/Footer
-- `src/components/` — reusable primitives (`Section`, `Badge`, `CtaButton`,
+- `src/layouts/Base.astro` - html/head, no-FOUC theme script, Header/Footer
+- `src/components/` - reusable primitives (`Section`, `Badge`, `CtaButton`,
   `CvButton`, `ThemeToggle`, `Header`, `Footer`)
-- `src/sections/` — page-level sections, used once, in document order
-- `src/lib/buttonStyles.ts` — shared button classes (used by Cta/Cv buttons)
-- `src/data/content.ts` — all content
-- `src/assets/` — images optimized by `astro:assets` (e.g. profile photo)
-- `scripts/generate-og.mjs` — builds the social share image (see below)
-- `public/og.png` — generated Open Graph image, committed as a static asset
+- `src/sections/` - page-level sections, used once, in document order
+- `src/lib/buttonStyles.ts` - shared button classes (used by Cta/Cv buttons)
+- `src/data/content.ts` - all content
+- `src/assets/` - images optimized by `astro:assets` (e.g. profile photo)
+- `scripts/generate-og.mjs` - builds the social share image (see below)
+- `public/og.png` - generated Open Graph image, committed as a static asset
 
 ## Conventions
 
@@ -88,17 +88,17 @@ Directory layout:
   `accent-strong` utility colors (`--color-accent*` in `global.css`). Use
   `text-accent-strong` on light backgrounds and `dark:text-accent` on dark, to
   keep contrast.
-- **Email**: never rendered in plaintext — assembled client-side from
+- **Email**: never rendered in plaintext - assembled client-side from
   `site.emailUser` / `site.emailDomain` to deter scrapers.
 - **CV**: not hosted for public download. The "Request CV" button (Contact)
   opens a prefilled email; the CV is sent manually on request.
-- **Open Graph image** (`public/og.png`, 1200×630): a typography-only cover
+- **Open Graph image** (`public/og.png`, 1200x630): a typography-only cover
   (name / role / tech line) referenced by the `og:image` + `twitter:image` tags
   in `Base.astro`. Generated by `scripts/generate-og.mjs` (`npm run og`), which
   lays the brand fonts (Inter + JetBrains Mono, straight from the Fontsource
   woff2 files) out with `fontkit` and bakes each glyph into the SVG as a vector
   **path**, then rasterizes with `sharp`. Paths-not-text is deliberate: libvips
-  here has no system fonts/fontconfig, so SVG `<text>` would render as tofu —
+  here has no system fonts/fontconfig, so SVG `<text>` would render as tofu -
   paths need no font at raster time and stay pixel-exact to the brand. Palette
   and copy are constants at the top of the script; rerun `npm run og` after any
   change and commit the updated PNG.
@@ -113,7 +113,7 @@ Directory layout:
 
 ## Astro documentation
 
-Full docs: https://docs.astro.build — see guides on
+Full docs: https://docs.astro.build - see guides on
 [components](https://docs.astro.build/en/basics/astro-components/),
 [styling/Tailwind](https://docs.astro.build/en/guides/styling/), and
 [images](https://docs.astro.build/en/guides/images/).
