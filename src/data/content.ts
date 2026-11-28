@@ -355,5 +355,5 @@ export const languages: Language[] = [
   { name: "Italian", level: "Native" },
   { name: "English", level: "B2" },
   { name: "Spanish", level: "B2" },
-  { name: "French", level: "B1" },
+  { name: "French", level: "B1 (rusty)" },
 ];
